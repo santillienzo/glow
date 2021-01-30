@@ -1,0 +1,119 @@
+article{
+    min-height: 83vh;
+    display: flex;
+    justify-content: center;
+}
+
+.user-info-container{
+    background-color: #ccc;
+    width: 55%;
+    margin: 15px auto;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 0 8px 1px #000;
+}
+
+
+
+.user-elementos-container h4{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+
+.datos-container p{
+    margin: 15px 0;
+}
+
+
+
+
+.btn_logout span{
+    margin-top: 15px;
+    color: rgb(185, 60, 60);
+    border-top:1px solid  rgb(185, 60, 60);
+    border-bottom:1px solid  rgb(185, 60, 60);
+}
+
+.error-container{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.errorA{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.dato{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/*--------------------RESPONSIVE--------------------*/
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px){
+    article{
+        min-height: 83vh;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .user-info-container{
+        background-color: #ddd;
+        width: 100%;
+        margin: 0px auto 15px 0;
+        padding: 25px;
+        border-radius: 0;
+        box-shadow: 0 3px 15px 1px #000;
+    }
+    
+    
+    
+    .user-elementos-container h4{
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    
+    
+    .datos-container p{
+        margin: 15px 0;
+    }
+    
+    
+    
+    
+    .btn_logout span{
+        margin-top: 15px;
+        color: rgb(185, 60, 60);
+        border-top:1px solid  rgb(185, 60, 60);
+        border-bottom:1px solid  rgb(185, 60, 60);
+    }
+    
+    .error-container{
+        width: 75%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .errorA{
+        color: #fff;
+        text-decoration: underline;
+    }
+}

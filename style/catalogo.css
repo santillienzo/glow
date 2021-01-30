@@ -1,0 +1,151 @@
+
+/*****************ARTICLE***********/
+
+.masVendido-container{
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 70px;
+}
+
+.masVendidoTítulo{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.masVendidoTítulo h2{
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.objetosMasVendidos-container{
+    width: 90%;
+    display: table;
+    margin: auto;
+    text-align: center;
+}
+
+.MVcard{
+    padding: 10px;
+    width: calc(100%/4);
+    display: inline-table;
+    box-shadow: 0 0 8px 3px #ccc;
+    background-color: #fff;
+    margin: 15px 10px;
+    margin-top: 0;
+    border-radius: 12px;
+}
+
+.MVcard:hover{
+    transform: scale(1.01);
+    transition: transform .1s linear;
+}
+
+
+
+.imgMV-container img{
+    object-fit: cover;
+}
+
+.tituloMV-container{
+    padding: 5px 0;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.descripcionMV-container{
+    padding: 5px 0;
+    min-height: 100px;
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.precioMV-container{
+    padding: 5px 0;
+    color: rgb(230, 119, 119);
+}
+
+
+
+
+
+
+/*--------------------RESPONSIVE--------------------*/
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px){
+    
+/*****************ARTICLE***********/
+
+.masVendido-container{
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 70px;
+}
+
+.masVendidoTítulo{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.masVendidoTítulo h2{
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.objetosMasVendidos-container{
+    width: 90%;
+    display: table;
+    margin: auto;
+    text-align: center;
+}
+
+.MVcard{
+    padding: 10px;
+    width: 250px;
+    display: inline-table;
+    box-shadow: 0 0 8px 3px #ccc;
+    background-color: #fff;
+    margin: 15px 10px;
+    margin-top: 0;
+    border-radius: 12px;
+}
+
+.MVcard:hover{
+    transform: scale(1.01);
+    transition: transform .1s linear;
+}
+
+
+
+.imgMV-container img{
+    object-fit: cover;
+}
+
+.tituloMV-container{
+    padding: 5px 0;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.descripcionMV-container{
+    display: none;
+}
+
+.precioMV-container{
+    display: none;
+}
+}
+
+

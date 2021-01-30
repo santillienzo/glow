@@ -1,0 +1,188 @@
+/***********FOOTER************/
+
+.footer{
+    height: 100vh;
+    background-color: #fff;
+}
+
+.contacto{
+    display: flex;
+    height: 96%;
+    padding-top: 3%;
+}
+
+.redesSociales-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.redes-list{
+    width: 100%;
+    text-align: center;
+}
+
+.fa-users{
+    font-size: 25px;
+}
+
+.redes-list p{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.redes-list li{
+    margin-top: 15px;
+}
+
+
+.contactos-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #B45434;
+}
+
+.contacto-list{
+    width: 100%;
+    text-align: center;
+}
+
+.fa-id-card{
+    font-size: 25px;
+}
+
+.contacto-list p{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.contacto-list li{
+    margin-top: 15px;
+}
+
+.copyright{
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.copyright-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+li img{
+    width: 50px;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+/*--------------------RESPONSIVE--------------------*/
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px){
+    /***********FOOTER************/
+
+.footer{
+    height: 100vh;
+    background-color: #fff;
+    border-top: 1px solid #000;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 96%;
+    padding-top: 3%;
+}
+
+.redesSociales-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #B45434;
+}
+
+.redes-list{
+    width: 100%;
+    text-align: center;
+}
+
+.fa-users{
+    font-size: 25px;
+}
+
+.redes-list p{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.redes-list li{
+    margin-top: 15px;
+}
+
+
+.contactos-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.contacto-list{
+    width: 100%;
+    text-align: center;
+}
+
+.fa-id-card{
+    font-size: 25px;
+}
+
+.contacto-list p{
+    display: block;
+    margin-left: 5px;
+}
+
+.contacto-list li{
+    margin-top: 15px;
+}
+
+.copyright{
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.copyright-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.redes-list li img{
+    display: none;
+}
+}

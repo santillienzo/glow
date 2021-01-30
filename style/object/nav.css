@@ -1,0 +1,528 @@
+body{
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: #000;
+}
+a:link{
+    color: #000;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+
+/******************************************************/
+
+
+
+.header{
+    height: 17vh;
+}
+
+/***********/
+
+#fondo-menu{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+}
+
+@keyframes fondo{
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 0.5;
+    }
+}
+
+.menu-container{
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    width: 25vw;
+    height: 100vh;
+    z-index: 100000000;
+    border-right: 4px solid #ccc;
+}
+
+.cerrar-menu{
+    width: 90%;
+    margin: 10px auto;
+    direction: rtl;
+}
+
+#close-nav{
+    font-size: 20px;
+    padding: 5px;
+}
+
+#close-nav:hover{
+    cursor: pointer;
+}
+
+
+
+.items-nav{
+    width: 90%;
+    margin: 25px 0px 0px 2px;
+}
+
+.items-nav li{
+    color: #000;
+    transition: color .2s linear;
+}
+
+.items-nav li:hover{
+    color: #999;
+    transition: color .2s linear;
+}
+
+.menu-items  li{
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.menu-items  li p{
+    font-size: 20px;
+}
+
+@keyframes abrirMenu{
+    0%{
+        margin-left: -50%;
+    }
+    100%{
+        margin-left:0%;
+    }
+}
+
+@keyframes cerrarMenu{
+    0%{
+        margin-left: 0%;
+    }
+    100%{
+        margin-left:-50%;
+    }
+}
+
+
+/**********OBJETOS DESPLEGABLES*/
+#catalogo-btn:hover{
+    cursor: pointer;
+}
+
+#catalogo-btn p::selection{
+    color: black;
+}
+
+#items-catalogo{
+    display: none;
+    width: 55%;
+    margin: auto;
+}
+
+.item-catalogo{
+    padding: 5px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.item-catalogo p{
+    margin-left: 15px;
+}
+
+
+/***********MENÚ DESPLEGABLE*/
+
+.part-superior{
+    background-color: #B45434;
+    height: 75%;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 100%;
+    align-items: center;
+}
+
+.icono-menu-container{
+    justify-self: start;
+    margin-left: 25px;
+}
+
+.icono-menu{
+    color: #fff;
+    font-size: 25px;
+}
+
+.icono-menu:hover{
+    cursor: pointer;
+}
+
+.titulo-container{
+    justify-self: center;
+}
+
+.titulo{
+    font-family: 'Alata', sans-serif;
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 25px;
+}
+
+.option-container{
+    justify-self: end;
+    margin-right: 25px;
+}
+
+.item-option{
+    color: white;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.item-option:hover{
+    cursor: pointer;
+}
+
+#input-search{
+    margin-right: 15px;
+    border: none;
+    padding: 5px;
+    display: none;
+}
+
+#input-search::placeholder{
+    color: #ccc;
+}
+
+#input-search:focus{
+    outline: none;
+    border: none;
+}
+
+
+.carrito-container .carrito-modal{
+    position: absolute;
+}
+
+.part-inferior{
+    background-color: #C7774D;
+    height: 25%;
+    width: 100%;
+}
+
+.text1{
+    display: flex;
+    
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.text2{
+    display: flex;
+    
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.text1 p{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.text2 p{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    border-left: 1px solid #fff;
+}
+
+.responsive{
+    display: none;
+}
+
+
+
+/*--------------------RESPONSIVE--------------------*/
+
+
+
+@media screen and (max-width:700px){
+    .header{
+        height: 17vh;
+        width: 100%;
+    }
+    
+    /***********/
+    
+    #fondo-menu{
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        z-index: 1000;
+    }
+    
+    @keyframes fondo{
+        0%{
+            opacity: 0;
+        }
+        
+        100%{
+            opacity: 0.5;
+        }
+    }
+    
+    .menu-container{
+        display: none;
+        position: fixed;
+        background-color: #fff;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100000000;
+        border-right: 4px solid #ccc;
+    }
+    
+    .cerrar-menu{
+        width: 90%;
+        margin: 10px auto;
+        direction: rtl;
+    }
+    
+    #close-nav{
+        font-size: 20px;
+        padding: 5px;
+    }
+    
+    #close-nav:hover{
+        cursor: pointer;
+    }
+    
+    
+    .items-nav{
+        /* background-color: red; */
+        width: 90%;
+        margin: 25px 0px 0px 2px;
+    }
+    
+    .items-nav li{
+        color: #000;
+        transition: color .2s linear;
+    }
+    
+    .items-nav li:hover{
+        color: #999;
+        transition: color .2s linear;
+    }
+    
+    .menu-items{
+        /* background-color: red; */
+        text-align: center;
+    }
+
+    .menu-items  li{
+        display: grid;
+        grid-template-columns: 10% 90%;
+    }
+    
+    .menu-items  li p{
+        font-size: 20px;
+    }
+
+    
+    
+    @keyframes abrirMenu{
+        0%{
+            margin-left: -100%;
+        }
+        100%{
+            margin-left:0%;
+        }
+    }
+    
+    @keyframes cerrarMenu{
+        0%{
+            margin-left: 0%;
+        }
+        100%{
+            margin-left:-100%;
+        }
+    }
+    
+    
+    /**********OBJETOS DESPLEGABLES*/
+    #catalogo-btn:hover{
+        cursor: pointer;
+    }
+    
+    #catalogo-btn p::selection{
+        color: black;
+    }
+    
+    #items-catalogo{
+        display: none;
+        width: 55%;
+        margin: auto;
+    }
+    
+    .item-catalogo{
+        padding: 5px;
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .item-catalogo p{
+        margin-left: 15px;
+    }
+    
+    
+    /***********MENÚ DESPLEGABLE*/
+    
+    .part-superior{
+        background-color: #B45434;
+        height: 75%;
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 100%;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .icono-menu-container{
+        justify-self: start;
+        margin: auto;
+    }
+    
+    .icono-menu{
+        color: #fff;
+        font-size: 25px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .icono-menu:hover{
+        cursor: pointer;
+    }
+    
+    .titulo-container{
+        justify-self: center;
+    }
+
+    
+    .titulo{
+        font-family: 'Alata', sans-serif;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        color: #fff;
+        font-size: 40px;
+        letter-spacing: 25px;
+    }
+    
+    .option-container{
+        display: none;
+    }
+
+    .menu-responsive{
+        justify-self: end;
+        text-align: center;
+        margin: auto;
+    }
+
+    
+    .item-option{
+        color: white;
+        display: inline-block;
+        font-size: 25px;
+        font-weight: 400;
+        margin-right: 10px;
+    }
+    
+    .item-option:hover{
+        cursor: pointer;
+    }
+    
+    #input-search{
+        margin-right: 15px;
+        border: none;
+        padding: 5px;
+        display: none;
+    }
+    
+    #input-search::placeholder{
+        color: #ccc;
+    }
+    
+    #input-search:focus{
+        outline: none;
+        border: none;
+    }
+    
+    .part-inferior{
+        background-color: #C7774D;
+        height: 25%;
+        width: 100%;
+    }
+    
+    .text1{
+        display: flex;
+        
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        font-family: 'Merriweather Sans', sans-serif;
+    }
+    
+    .text2{
+        display: flex;
+        
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        font-family: 'Merriweather Sans', sans-serif;
+    }
+    
+    .text1 p{
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .text2 p{
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        border-left: 1px solid #fff;
+    }
+
+    .responsive{
+        display: block;
+    }
+}

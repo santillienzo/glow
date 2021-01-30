@@ -1,0 +1,348 @@
+body{
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: #333;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: #000;
+}
+a:link{
+    color: #000;
+}
+
+li{
+    list-style: none;
+}
+/************************************/
+
+.title-container{
+    padding: 15px;
+    background-color: #444;
+    color: #ffffff;
+    margin: 15px 0;
+    border: 3px solid #000;
+    border-left: none;
+    border-right: none;
+}
+
+.title-container h4{
+    text-align: center;
+}
+
+/*-----------TABLA GENERAL*/
+
+.container-tablas{
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+.container-tablas-ex{
+    width: 31%;
+}
+.tabla {
+    table-layout: fixed;
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid #3d1d6d;
+    border-bottom: none;
+    box-shadow: 0px 25px 15px 8px #222;
+}
+
+.tabla thead tr{
+    height: 80px;
+    min-height: 80px;
+}
+
+.tabla thead th{
+    border: 1px solid #AC84E8;
+}
+
+.tabla thead th:nth-child(1) {
+    width: 20%;
+}
+
+.tabla thead th:nth-child(2) {
+    width: 20%;
+}
+
+.tabla thead th:nth-child(3) {
+    width: 5%;
+}
+
+
+.tabla th, td {
+    padding: 20px;
+}
+
+.tabla tbody td {
+    text-align: center;
+}
+
+.tabla thead{
+    background-color: #3d1d6d;
+    color: #dddddd;
+}
+
+.tabla tbody  tr:nth-child(odd){
+    background-color: #AC84E8;
+    color: #ffffff;
+    transition: background .1s ease-in;
+}
+
+.tabla tbody  tr:nth-child(even){
+    background-color: #9a77cf;
+    color: #ffffff;
+    transition: background .1s ease-in;
+}
+
+.tabla tbody tr:hover{
+    background-color:  #8d61cf;
+    transition: background .1s ease-in;
+}
+
+.tabla tbody th{
+    color: #ddd;
+    
+}
+
+/******************************************/
+.input-container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ccc;
+    height: 50px;
+    border-radius: 0 0 15px 15px;
+}
+
+.input-container input:nth-child(1){
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9a77cf;
+}
+
+.input-container input:nth-child(2){
+    background-color: #9a77cf;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .15s ease-in, color .15s ease-in ;
+
+}
+
+.input-container input:nth-child(2):hover{
+    background-color: #fff;
+    color: #9a77cf;
+    transition: background .15s ease-in, color .15s ease-in ;
+}
+
+.input-container input:focus{
+    outline: none;
+}
+
+
+/******************************************/
+
+
+
+caption {    
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    color: #ccc;
+    text-align: center;
+    letter-spacing: 1px;
+    border-top: none;
+    background-color: #336;
+}
+
+/* ----------TABLA PRINCIPAL------------ */
+
+.tabla-productos {
+    table-layout: fixed;
+    width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 3px solid #B45434;
+    border-bottom: none;
+    /* box-shadow: 0px 15px 8px 8px #ccc; */
+}
+
+.tabla-productos thead th{
+    border: 1px solid #C7774D;
+}
+
+.tabla-productos thead th:nth-child(1) {
+    width: 5%;
+}
+
+.tabla-productos thead th:nth-child(2) {
+    width: 20%;
+}
+
+.tabla-productos thead th:nth-child(3) {
+    width: 20%;
+}
+
+.tabla-productos thead th:nth-child(4) {
+    width: 15%;
+}
+
+.tabla-productos thead th:nth-child(5) {
+    width: 10%;
+}
+.tabla-productos thead th:nth-child(6) {
+    width: 30%;
+}
+.tabla-productos thead th:nth-child(7) {
+    width: 5%;
+}
+
+.tabla-productos th, td {
+    padding: 20px;
+}
+
+.tabla-productos tbody td {
+    text-align: center;
+}
+
+.tabla-productos thead{
+    background-color: #B45434;
+    color: #dddddd;
+
+}
+
+.tabla-productos tbody  tr:nth-child(odd){
+    background-color: #C7774D;
+    color: #ffffff;
+    transition: background .1s ease-in;
+}
+
+.tabla-productos tbody  tr:nth-child(even){
+    background-color: #be7148;
+    color: #ffffff;
+    transition: background .1s ease-in;
+}
+
+.tabla-productos tbody tr:hover{
+    background-color:  #9e5934;
+    transition: background .1s ease-in;
+}
+
+.tabla-productos tbody th{
+    color: #ddd;
+    
+}
+
+/*************************************/
+
+.input_productos-container{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ccc;
+    height: 50px;
+    border-radius: 0 0 15px 15px;
+}
+
+.input_productos-container input:nth-child(1){
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #be7148;
+}
+.input_productos-container input:nth-child(2){
+    width: 200px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #be7148;
+}
+.input_productos-container input:nth-child(3){
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #be7148;
+}
+.input_productos-container input:nth-child(4){
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #be7148;
+}
+
+.input_productos-container .archivo-container{
+    position: relative;
+    padding: 5px;
+    width: 40px;
+    height: 30px;
+    background-color: transparent;
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid #C7774D;
+    margin: 0 5px;
+}
+
+        .input_productos-container p{
+            text-align: center;
+            color: #555;
+        }
+
+        .input_productos-container .archivo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+.input_productos-container .btn-produc{
+    background-color: #C7774D;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input_productos-container .btn-produc:hover{
+    background-color: #fff;
+    color: #C7774D;
+    transition: background .15s ease-in, color .15s ease-in ;
+}
+
+.input_productos-container input:focus{
+    outline: none;
+}
+
+/********************************************/
+
+.capt-productos{    
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    color: #ccc;
+    text-align: center;
+    letter-spacing: 1px;
+    border-top: none;
+    background-color: #533;
+}
+
+.back span{
+    color: #fff;
+    margin-left: 25px;
+    text-decoration:underline ;
+}

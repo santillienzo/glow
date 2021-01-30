@@ -1,0 +1,157 @@
+
+/*******************ARTICLE*/
+.article{
+    min-height: 83vh;
+}
+
+.title{
+    width: 50%;
+    margin: auto;
+    margin: 15px auto;
+    text-align: center;
+    background-color: #ccc;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.title h3{
+    font-size: 25px;
+    color: #000;
+}
+.faq{
+    background-color: #eee;
+    width: 80%;
+    margin: auto;
+    height: 90%;
+    margin-bottom: 25px;
+    padding: 35px 15px;
+    border-radius: 15px;
+    /* box-shadow: 2px 2px 8px 3px #555; */
+
+}
+
+.preguntas-container{
+    display: table;
+    text-align: center;
+}
+
+.q_container{
+    background-color: #555;
+    display: inline-table;
+    width: 250px;
+    min-height: 350px;
+    max-height: 350px;
+    padding: 25px;
+    margin: 20px 15px;
+    text-align: center;
+    border-left: 5px solid #000;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    transform: scale(1);
+    transition: transform .05s ease-in;
+}
+
+.q_container:hover{
+    transform: scale(1.03);
+    transition: transform .05s ease-in;
+}
+
+.q_container h4{
+    font-size: 20px;
+    padding: 5px;
+}
+
+.q_container p::first-letter{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+/*--------------------RESPONSIVE--------------------*/
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px){
+    /*******************ARTICLE*/
+.article{
+    min-height: 83vh;
+}
+
+.title{
+    width: 90%;
+    margin: auto;
+    margin: 15px auto;
+    text-align: center;
+    background-color: #ccc;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 8px 3px #555;
+
+}
+
+.title h3{
+    font-size: 25px;
+    color: #000;
+}
+.faq{
+    background-color: #eee;
+    width: 90%;
+    margin: auto;
+    height: 90%;
+    margin-bottom: 25px;
+    padding: 15px 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px 3px #555;
+
+}
+
+.preguntas-container{
+    display: table;
+    text-align: center;
+}
+
+.q_container{
+    background-color: #555;
+    display: inline-table;
+    width: 250px;
+    min-height: 350px;
+    max-height: 350px;
+    padding: 25px;
+    margin: 20px 15px;
+    text-align: center;
+    border-left: 5px solid #000;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    transform: scale(1);
+    transition: transform .05s ease-in;
+}
+
+.q_container:hover{
+    transform: scale(1.03);
+    transition: transform .05s ease-in;
+}
+
+.q_container h4{
+    font-size: 25px;
+    padding: 5px;
+}
+
+.q_container p{
+    font-size: 18px;
+}
+
+.q_container p::first-letter{
+    font-size: 22px;
+}
+
+}
+

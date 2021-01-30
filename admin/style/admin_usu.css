@@ -1,0 +1,102 @@
+body{
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: #333;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: #000;
+}
+a:link{
+    color: #000;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+/* ---------------------- */
+.title{
+    padding: 15px;
+    background-color: #444;
+    color: #ffffff;
+    margin: 15px 0;
+    border: 3px solid #000;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carta_user{
+    border: 1px solid black;
+    width: 60%;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 5px #222;
+}
+
+.nombre_user{
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #B45434;
+    color: #fff;
+    border-bottom: 3px solid #9e5934;
+    border-radius: 10px 10px 0 0;
+}
+
+.info_user_container{
+    padding:15px;
+    background-color:  #be7148;
+    border-radius: 0 0 10px 10px ;
+
+}
+
+.info_user_container p span{
+    font-weight: bold;
+}
+
+.eliminar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.eliminar span{
+    color: #fff;
+    /* text-decoration: underline; */
+    background-color: rgb(226, 80, 80);
+    padding: 8px;
+    margin-top: 5px;
+    text-align: right;
+    border-radius: 10px;
+    transition: background .15s ease-in, color .15s ease-in;
+
+}
+
+.eliminar span:hover{
+    background-color: #ddd;
+    color: rgb(226, 80, 80);
+    transition: background .15s ease-in, color .15s ease-in;
+}
+
+
+
+.admin{
+    color: rgb(22, 221, 22);
+}
+
+.back span{
+    color: #fff;
+    margin-left: 25px;
+    text-decoration:underline ;
+}

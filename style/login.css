@@ -1,0 +1,178 @@
+
+/*********************ARTICLE*****************/
+
+.article{
+    min-height: 83vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-image: url('../Images/fondo/fashion-1031469_1920.jpg');
+    background-size: cover;
+}
+
+.formulario{
+    background-color: rgb(199, 119, 77, .8);
+    opacity: 15px;
+    width: 35%;
+    height: 100%;
+    margin: auto;
+    padding: 20px 45px;
+    border-radius: 20px;
+    /* box-shadow: 5px 10px 15px 3px #aaa; */
+}
+
+.formulario h3{
+    color: #fff;
+}
+
+.formulario input{
+    width: 100%;
+    padding:  10px 15px;
+    margin-top: 25px;
+    border: none;
+    /* border-bottom: 1px solid #000; */
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.formulario input:focus{
+    outline: none;
+    border: none;
+}
+
+.formulario input::placeholder{
+    color: #000;
+}
+
+.formulario button{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(100, 68, 51);
+    transition: background-color .2s ease-in;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario button:hover{
+    background-color:  rgb(80, 56, 42);
+    transition: background-color .2s ease-in;
+}
+
+.formulario p{
+    margin-top: 15px;
+}
+
+.text-registro-container{
+    width: 100%;
+}
+
+.text-registro-container p{
+    color: #eee;
+}
+
+.text-registro-container p a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+/*--------------------RESPONSIVE--------------------*/
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px){
+    
+/*********************ARTICLE*****************/
+
+.article{
+    min-height: 83vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-image: url('../Images/fondo/fashion-1031469_1920.jpg');
+    background-size: cover;
+}
+
+.formulario{
+    background-color: rgb(199, 119, 77, .8);
+    opacity: 15px;
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    padding: 20px 45px;
+    border-radius: 20px;
+    /* box-shadow: 5px 10px 15px 3px #aaa; */
+}
+
+.formulario h3{
+    color: #fff;
+}
+
+.formulario input{
+    width: 100%;
+    padding:  10px 15px;
+    margin-top: 25px;
+    border: none;
+    /* border-bottom: 1px solid #000; */
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.formulario input:focus{
+    outline: none;
+    border: none;
+}
+
+.formulario input::placeholder{
+    color: #000;
+}
+
+.formulario button{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(100, 68, 51);
+    transition: background-color .2s ease-in;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario button:hover{
+    background-color:  rgb(80, 56, 42);
+    transition: background-color .2s ease-in;
+}
+
+.formulario p{
+    margin-top: 15px;
+}
+
+.text-registro-container{
+    width: 100%;
+}
+
+.text-registro-container p{
+    color: #eee;
+}
+
+.text-registro-container p a{
+    color: #fff;
+    text-decoration: underline;
+}
+}

@@ -1,0 +1,417 @@
+
+/*******************ARTICLE**************************/
+/*******************Slider**************************/
+
+.slider{
+    width: 100%;
+    height:83vh ;
+    margin: auto;
+    overflow: hidden;
+}
+
+.lista-slider{
+    display: flex;
+    padding: 0;
+    width: 300%;
+    height: 100%;
+    animation: cambio 20s infinite alternate linear;
+}
+
+.elemento-slider{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes cambio{
+    0%{margin-left:0 ;}
+    30%{margin-left: 0;}
+
+    36%{margin-left: -100%;}
+    60%{margin-left: -100%;}
+
+    66%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+
+/*AQUÍ ARRIBA HICE LA LÓGICA DEL SLIDER CON CSS*/
+
+
+/*************Más vendidos*********************/
+
+
+.masVendido-container{
+    width: 100%;
+    margin-top: 25px;
+    background-color: #eee;
+    padding-bottom: 70px;
+}
+
+.masVendidoTítulo{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.masVendidoTítulo h2{
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.objetosMasVendidos-container{
+    width: 90%;
+    display: table;
+    margin: auto;
+    text-align: center;
+}
+
+.MVcard{
+    padding: 10px;
+    width: calc(100%/4);
+    display: inline-table;
+    box-shadow: 0 0 8px 3px #ccc;
+    background-color: #fff;
+    margin: 5px 5px;
+}
+
+.MVcard:hover{
+    transform: scale(1.01);
+    transition: transform .1s linear;
+}
+
+
+
+.imgMV-container img{
+    object-fit: cover;
+}
+
+.tituloMV-container{
+    padding: 5px 0;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.descripcionMV-container{
+    padding: 5px 0;
+    min-height: 100px;
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.precioMV-container{
+    padding: 5px 0;
+    color: rgb(230, 119, 119);
+}
+
+
+/*********Accesorios********************************/
+
+.accesorios-container{
+    width: 100%;
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+    padding-bottom: 70px;
+}
+
+.accesoriosTitulo{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.accesoriosTitulo h2{
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.cardAccesorios-container{
+    width: 90%;
+    display: table;
+    margin: auto;
+    text-align: center;
+}
+
+.accCard{
+    display: inline-table;
+    width: 40%;
+    height: 650px;
+    overflow: hidden;
+    margin: 5px 10px;
+    box-shadow: 0 0 8px 3px #ccc;
+    filter: brightness(1);
+    transition: filter .2s ease-in-out;
+
+}
+
+.accCard:hover{
+    filter: brightness(1.1);
+    transform: scale(1.01);
+    transition: filter .2s ease-in-out, transform .2s ease-in-out;
+    cursor: pointer;
+}
+
+.titleAcc-container{
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accTitle{
+    font-family: 'Alata', sans-serif;
+    position: relative;
+    background-color: #B45434;
+    width: 100%;
+    color: #fff;
+    font-size: 35px;
+}
+
+.complementoCard{
+    background-image: url('../Images/acc/complemento.jpg');
+    background-size: cover;
+    
+}
+
+.roomCard{
+    background-image: url('../Images/acc/room.jpg');
+    background-size: cover;
+}
+
+
+.lista-slider-responsive{
+    display: none;
+}
+
+
+
+
+
+
+/*--------------------RESPONSIVE--------------------*/
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px){
+
+    
+/*******************ARTICLE**************************/
+/*******************Slider**************************/
+
+.slider{
+    width: 100%;
+    height:53vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.lista-slider{
+    display: none;
+}
+
+.lista-slider-responsive{
+    display: flex;
+    padding: 0;
+    width: 300%;
+    height: 100%;
+    animation: cambio 20s infinite alternate linear;
+}
+
+.elemento-slider{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
+}
+
+@keyframes cambio{
+    0%{margin-left:0 ;}
+    30%{margin-left: 0;}
+
+    36%{margin-left: -100%;}
+    60%{margin-left: -100%;}
+
+    66%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+
+/*AQUÍ ARRIBA HICE LA LÓGICA DEL SLIDER CON CSS*/
+
+
+/*************Más vendidos*********************/
+
+
+.masVendido-container{
+    width: 100%;
+    margin-top: 25px;
+    background-color: #eee;
+    padding-bottom: 70px;
+}
+
+.masVendidoTítulo{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.masVendidoTítulo h2{
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.objetosMasVendidos-container{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    overflow: scroll;
+}
+
+.MVcard{
+    padding: 10px;
+    width: 250px;
+    display: inline-table;
+    box-shadow: 0 0 8px 3px #ccc;
+    background-color: #fff;
+    margin: 5px 5px;
+}
+
+.MVcard:hover{
+    transform: scale(1.01);
+    transition: transform .1s linear;
+}
+
+
+
+.imgMV-container img{
+    object-fit: cover;
+}
+
+.tituloMV-container{
+    padding: 5px 0;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.descripcionMV-container{
+    padding: 5px 0;
+    min-height: 100px;
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.precioMV-container{
+    padding: 5px 0;
+    color: rgb(230, 119, 119);
+}
+
+
+/*********Accesorios********************************/
+
+.accesorios-container{
+    width: 100%;
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+    padding-bottom: 70px;
+}
+
+.accesoriosTitulo{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.accesoriosTitulo h2{
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.cardAccesorios-container{
+    width: 90%;
+    display: table;
+    margin: auto;
+    text-align: center;
+}
+
+.accCard{
+    display: inline-table;
+    max-width: 300px ;
+    min-width: 300px ;
+    height: 450px;
+    overflow: hidden;
+    margin: 5px 10px ;
+    box-shadow: 0 0 8px 3px #ccc;
+    filter: brightness(1);
+    transition: filter .2s ease-in-out;
+
+}
+
+.accCard:hover{
+    filter: brightness(.5);
+    transform: scale(1.01);
+    transition: filter .2s ease-in-out, transform .2s ease-in-out;
+    cursor: pointer;
+}
+
+.titleAcc-container{
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accTitle{
+    font-family: 'Alata', sans-serif;
+    position: relative;
+    background-color: #B45434;
+    width: 100%;
+    color: #fff;
+    font-size: 30px;
+}
+
+.complementoCard{
+    background-image: url('../Images/acc/complemento.jpg');
+    background-size: cover;
+    
+}
+
+.roomCard{
+    background-image: url('../Images/acc/room.jpg');
+    background-size: cover;
+    margin-top: 15px;
+    
+}
+
+
+
+}
+
+
