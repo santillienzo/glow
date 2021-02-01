@@ -3,16 +3,7 @@ include('../_conexion.php');
 $response=new stdClass();
 session_start();
 
-function estado2texto($id){
-    switch($id){
-        case '1':
-            return 'Por pagar';
-            break;
-        case '2':
-            return 'Preparando compra';
-            break;
-    }
-}
+
 
 //$datos=array();
 $datos=[];
@@ -22,7 +13,7 @@ $sql="select *,ped.estado_ped estadoped from pedido ped
 inner join productos pro
 on ped.id_producto=pro.id_producto
 inner join estados_ped on ped.estado_ped = estados_ped.estado_ped
-where ped.estado_ped !=1 and cod_user = $usuario";
+where ped.estado_ped =2 and cod_user = $usuario";
 $result=mysqli_query($con,$sql);
 while($row=mysqli_fetch_array($result)){
 	$obj=new stdClass();

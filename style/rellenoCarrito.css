@@ -64,9 +64,9 @@ article{
     text-transform: uppercase;
 }
 
-button.mercadopago-button{
+.btn-comprar{
     border: none;
-    padding: 2px 15px;
+    padding: 15px 15px;
     margin: 15px;
     background-color: rgb(78, 140, 177);
     color: #fff;

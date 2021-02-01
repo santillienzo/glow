@@ -50,9 +50,11 @@
                             '<a href="direccion.php" title="Agregar dirección"><span>Dirección:</span><span class="cont">No hay ninguna dirección asociada.</span></a>'.
                         '</div>';
                 }
+                echo
 
-                require'pagar.php';
-    echo
+            '<div class="btn-comprar-container">'.
+                    '<button class="btn-comprar" onclick="elegirEntrega()">Continuar comprar</button>'.
+            '</div>'.
         '</div>'.
     '</article>';
         
@@ -126,7 +128,11 @@
                         console.error(err);
                     }
                 });
-            
+        }
+
+
+        function elegirEntrega(){
+            window.location.href="entreg.php";
         }
 
         function formato_precio(valor){

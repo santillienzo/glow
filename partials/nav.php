@@ -97,7 +97,7 @@
             </div>
         </div>
         <div class="part-inferior">
-            <div class="text1"><p>ENVÍOS A TODO EL PAÍS</p></div>
+            <div class="text1"><p>ENVÍOS A TODO MENDOZA</p></div>
             <div class="text2"><p>MADE WITH LOVE</p></div>
         </div>
     </header>
