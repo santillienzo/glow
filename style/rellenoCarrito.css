@@ -74,7 +74,9 @@ article{
 }
 
 .btn-comprar-container{
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .btn-comprar:hover{
@@ -84,6 +86,19 @@ article{
 .btn-comprar:focus{
     outline: none;
 }
+
+
+
+    button.mercadopago-button{
+        border: none;
+        padding: 5px 20px;
+        margin: 15px;
+        margin-left: 5px;
+        background-color: rgb(78, 140, 177);
+        color: #fff;
+        border-radius: 5px;
+    }
+
 
 .footer{
 
@@ -135,8 +150,52 @@ article{
 }
 
 
+.aviso-container{
+    display: flex;
+    height: 83vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.aviso{
+    background-color: #ddd;
+    padding: 75px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+}
 
 
+.direccion-p span, .direccion-p p{
+    display: inline-block;
+}
+
+/* .cancelar:link, .cancelar:visited{
+    color: red;
+} */
+
+.cancelar{
+    display: inline-block;
+    margin: 0;
+    background-color: rgb(250, 100, 100);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.cancelar i{
+    color: #fff;
+    font-size: 30px;
+}
+
+.aviso a{
+    text-decoration: underline;
+}
 
 /*--------------------RESPONSIVE--------------------*/
 

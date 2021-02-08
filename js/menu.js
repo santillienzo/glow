@@ -54,7 +54,41 @@ catalogo_btn.addEventListener("click",()=>{
 //DESPLEGAR INPUT
 const input_search = document.getElementById('input-search');
 const btn_search = document.getElementById('search');
+const btn_buscar = document.getElementById('buscar');
 
 btn_search.addEventListener("click",()=>{
     input_search.style.display = "inline-block";
+    btn_search.style.display = "none";
+    btn_buscar.style.display = "inline-block"
 });
+
+//BUSCADOR
+$(document).ready(function(){
+    $("#input-search").keyup(function(e){
+        if(e.keyCode==13){
+            search_product();
+        }
+    });
+});
+btn_buscar.addEventListener("click",()=>{
+    search_product()
+});
+
+function search_product(){
+    window.location.href="busquedas.php?product="+$("#input-search").val();
+}
+
+//BUSCADOR RESPONSIVE
+
+const btn_buscar_r = document.getElementById('buscar-r');
+
+btn_buscar_r.addEventListener("click",()=>{
+    search_product_r()
+});
+
+
+function search_product_r(){
+    window.location.href="busquedas.php?product="+$("#input-search-r").val();
+}
+
+

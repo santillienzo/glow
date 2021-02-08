@@ -1,5 +1,5 @@
 <?php
-
+header("Content-Type: text/html;charset=utf-8");
 include('../_conexion.php');
 $email_usu = $_POST['email_usu'];
 

@@ -196,7 +196,9 @@ li{
 .item-option:hover{
     cursor: pointer;
 }
-
+#buscar{
+    display: none;
+}
 #input-search{
     margin-right: 15px;
     border: none;
@@ -522,7 +524,43 @@ li{
         border-left: 1px solid #fff;
     }
 
+    .text p{
+        font-size: 13px;
+    }
+
     .responsive{
         display: block;
     }
+    
+    .buscador{
+        display: flex;
+        align-items: center;
+        border: 2px solid #000;
+        border-radius: 15px;
+        padding: 3px;
+    }
+    #input-search-r{
+        border: none;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    #input-search-r::placeholder{
+        color: #ccc;
+    }
+    
+    #input-search-r:focus{
+        outline: none;
+        border: none;
+    }
+
+    .buscador-container{
+        margin: 0;
+        margin-bottom: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }

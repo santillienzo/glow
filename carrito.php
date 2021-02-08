@@ -20,6 +20,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 
     <title>CARRITO</title>
@@ -30,32 +32,8 @@
     <?php
     if (isset($_SESSION['cod_user'])) {
         echo
-    '<article>'.
-        '<div class="relleno-container">'.
-            '<div class="relleno" id="space-list">'.
-
-            '</div>';
-                if ($_SESSION['dir_usu'] != NULL) {
-                    echo
-                        '<div class="datos-container">'.
-                            '<p><span>Subtotal:</span><span id="montoTotal"></span></p>'.
-                            '<p><span>N° de teléfono:</span>'.$_SESSION['tel_usu'].'</p>'.
-                            '<a href="direccion.php" title="Cambiar"><span>Dirección:</span><span class="cont">'.$_SESSION['dir_usu'].'</span></a>'.
-                        '</div>';
-                }else{
-                    echo
-                        '<div class="datos-container">'.
-                            '<p><span>Subtotal:</span><span id="montoTotal"></span></p>'.
-                            '<p><span>N° de teléfono:</span>'.$_SESSION['tel_usu'].'</p>'.
-                            '<a href="direccion.php" title="Agregar dirección"><span>Dirección:</span><span class="cont">No hay ninguna dirección asociada.</span></a>'.
-                        '</div>';
-                }
-                echo
-
-            '<div class="btn-comprar-container">'.
-                    '<button class="btn-comprar" onclick="elegirEntrega()">Continuar comprar</button>'.
-            '</div>'.
-        '</div>'.
+    '<article id="article">'.
+        
     '</article>';
         
     }else{
@@ -78,30 +56,51 @@
 				type:'POST',
 				data:{},
 				success:function(data){
-					console.log(data);
-                    let html='';
-                    let monto=0;
-					for (var i = 0; i < data.datos.length; i++) {
-                        html+=
-                        '<div class="item-pedido">'+
-                            '<div class="pedido-img">'+
-                                '<img src="Images/productos/'+ data.datos[i].rut_imagen+'">'+
-                            '</div>'+
-                            '<div class="pedido-detalle">'+
-                                '<div class="box-detalle">' +
-                                    '<h3>'+data.datos[i].nombre_producto+'</h3>'+
-                                    '<p><b>Precio:</b>'+formato_precio(data.datos[i].pre_pro)+'<p>'+
-                                    '<p><b>Fecha:</b>'+data.datos[i].fecha_pedido+'</p>'+
-                                    '<p><b>Cantidad:</b>'+data.datos[i].cantidad+'</p>'+
-                                    '<a class="eliminar" href="service/pedido/eliminar.php?id='+data.datos[i].codped+'"><span>Eliminar</span></a>'+
-                                '</div>' +
-                            '</div>'+
-                        '</div>';
-                        if(data.datos[i].estado=='1'){
-                            monto+=parseFloat(data.datos[i].pre_pro * data.datos[i].cantidad);
+                    console.log(data);
+                    let article =''; //CONTROLAMOS QUE HAYAN ELEMENTOS A MOSTRAR O SI DAMOS UN AVISO.
+                    let producto=''; //CON ESTRE MOSTRAMOS LOS PRODUCTOS
+                    let monto=0; //PRECIO
+                    if(data.datos.length > 0){
+                        article =
+                            '<div class="relleno-container">'+
+                                '<div class="relleno" id="space-list">'+
+
+                                '</div>'+
+                                    '<div class="datos-container">'+
+                                        '<p><span>Subtotal:</span><span id="montoTotal"></span></p>'+
+                                    '</div>'+
+                                '<div class="btn-comprar-container">'+
+                                        '<button class="btn-comprar" onclick="elegirEntrega()">Continuar comprar</button>'+
+                                '</div>'+
+                            '</div>';
+                        for (var i = 0; i < data.datos.length; i++) {
+                            producto+=
+                            '<div class="item-pedido">'+
+                                '<div class="pedido-img">'+
+                                    '<img src="Images/productos/'+ data.datos[i].rut_imagen+'">'+
+                                '</div>'+
+                                '<div class="pedido-detalle">'+
+                                    '<div class="box-detalle">' +
+                                        '<h3>'+data.datos[i].nombre_producto+'</h3>'+
+                                        '<p><b>Precio:</b>'+formato_precio(data.datos[i].pre_pro)+'<p>'+
+                                        '<p><b>Fecha:</b>'+data.datos[i].fecha_pedido+'</p>'+
+                                        '<p><b>Cantidad:</b>'+data.datos[i].cantidad+'</p>'+
+                                        '<a class="eliminar" href="service/pedido/eliminar.php?id='+data.datos[i].codped+'"><span>Eliminar</span></a>'+
+                                    '</div>' +
+                                '</div>'+
+                            '</div>';
+                            if(data.datos[i].estado=='1'){
+                                monto+=parseFloat(data.datos[i].pre_pro * data.datos[i].cantidad);
+                            }
                         }
-					}
-					document.getElementById("space-list").innerHTML=html;
+					}else{
+                        article =
+                        '<div class="aviso-container">'+
+                            '<div class="aviso">UPS! parece que no tienes nada en el carrito. Mirá algún producto y agregalo!</div>'+
+                        '</div>';
+                    }
+					document.getElementById("article").innerHTML=article;
+					document.getElementById("space-list").innerHTML=producto;
 					document.getElementById("montoTotal").innerHTML=formato_precio(monto);
 				},
 				error:function(err){

@@ -1,7 +1,6 @@
 <?php
     session_start();
-    $response=new stdClass();
-    error_reporting(0);
+
     
     function sql($val_entreg){
         $response=new stdClass();
@@ -12,8 +11,8 @@
         $dirusu= $_SESSION['dir_usu'];
         $telusu= $_SESSION['tel_usu'];
 
-        $sql = "UPDATE pedido SET dirusuped='$dirusu',telusuped='$telusu',estado_ped=2, entrega=$val_entreg
-                    WHERE estado_ped=1 AND cod_user = $cod_user";
+        $sql = "UPDATE pedido SET dirusuped='$dirusu',telusuped='$telusu',estado_ped=2, id_entrega=$val_entreg
+                WHERE estado_ped=1 AND cod_user = $cod_user";
             $result= mysqli_query($con,$sql);
             if ($result) {
                 $response->state=true;
@@ -28,11 +27,7 @@
 
     if ($_REQUEST['optio-radio'] == "domicilio") {
         if ($_SESSION['dir_usu'] == NULL) {
-            echo
-            '<script type="text/javascript">'.
-                'alert("No tienes ninguna dirección asociada a tu cuenta.");'.
-                'window.location.href="../../entreg.php"'.
-            '</script>';
+            header("Location: ../../entreg.php?e=1");
         }else{
             sql(1);
         }
@@ -41,11 +36,7 @@
     }elseif ($_REQUEST['optio-radio'] == "punto_comun") {
         sql(3);
     }elseif ($_REQUEST['optio-radio'] == NULL){
-        echo
-            '<script type="text/javascript">'.
-                'alert("Selecciona una opción de entrega.");'.
-                'window.location.href="../../entreg.php"'.
-            '</script>';
+        header("Location: ../../entreg.php?e=2");
     }
 
     ?>
@@ -60,6 +51,6 @@
 
     
 
-
+header("Content-Type: text/html;charset=utf-8");
 header('Content-Type: application/json');
 echo json_encode($response);

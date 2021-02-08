@@ -5,6 +5,14 @@
                 <i class="fas fa-times" id="close-nav"></i>
             </div>
             <nav class="menu-items">
+                <div class="responsive">
+                <div class="items-nav buscador-container">
+                        <div class="buscador">
+                            <input type="text" id="input-search-r" placeholder="Busca aquí...">
+                            <li class="item-option" id="buscar-r" title="Buscar"><i class="fas fa-search"></i></li>
+                        </div>
+                    </div>
+                </div>
                 <div class="items-nav">
                     <a href="/"><li><i class="fas fa-genderless"></i><p>Inicio</p></li></a>
                 </div>
@@ -26,16 +34,13 @@
                     <a href="contacto.php"><li><i class="fas fa-genderless"></i><p>Contacto</p></li></a>
                 </div>
                 <div class="items-nav">
-                    <a href="politicaDev.php"><li><i class="fas fa-genderless"></i><p>Política de devolución</p></li></a>
-                </div>
-                <div class="items-nav">
-                    <a href="mediospago.php"><li><i class="fas fa-genderless"></i><p>Medios de pago</p></li></a>
-                </div>
-                <div class="items-nav">
-                    <a href="FAQ.php"><li><i class="fas fa-genderless"></i><p>Ayuda</p></li></a>
+                    <a href="FAQ.php"><li><i class="fas fa-genderless"></i><p>FAQ</p></li></a>
                 </div>
                 <div class="items-nav">
                     <a href="pedido.php"><li><i class="fas fa-genderless"></i><p>Mis pedidos</p></li></a>
+                </div>
+                <div class="items-nav">
+                    <a href="politicaDev.php"><li><i class="fas fa-genderless"></i><p>Política de devolución</p></li></a>
                 </div>
                 <?php
                 if (isset($_SESSION['cod_user'])) {
@@ -55,6 +60,9 @@
                         echo
                         '<div class="items-nav">'.
                             '<a href="user.php"><li><i class="fas fa-genderless"></i><p>Perfil</p></li></a>'.
+                        '</div>'.
+                        '<div class="items-nav">'.
+                            '<a href="../service/sesion/cerrarSesion.php"><li><i class="fas fa-genderless"></i><p>Cerrar sesión</p></li></a>'.
                         '</div>';
                     }else{
                         echo
@@ -62,9 +70,9 @@
                             '<a href="login.php"><li><i class="fas fa-genderless"></i><p>Iniciar sesión</p></li></a>'.
                         '</div>';
                     }
-
-
                     ?>
+
+
                 </div>
             </nav>
         </div>
@@ -76,6 +84,7 @@
             <nav class="option-container">
                 <input type="text" id="input-search" placeholder="Busca aquí...">
                 <li class="item-option" id="search" title="Buscar"><i class="fas fa-search"></i></li>
+                <li class="item-option" id="buscar" title="Buscar"><i class="fas fa-search"></i></li>
                 <?php
                 if(isset($_SESSION['cod_user'])){
                     echo '<a href="user.php"><li class="item-option" id="user" title="Tu cuenta"><i class="fas fa-user"></i></li></a>';
@@ -97,7 +106,7 @@
             </div>
         </div>
         <div class="part-inferior">
-            <div class="text1"><p>ENVÍOS A TODO MENDOZA</p></div>
-            <div class="text2"><p>MADE WITH LOVE</p></div>
+            <div class="text1 text"><p>ENVÍOS A TODO MENDOZA</p></div>
+            <div class="text2 text"><p>MADE WITH LOVE</p></div>
         </div>
     </header>

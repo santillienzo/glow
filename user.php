@@ -28,31 +28,50 @@ error_reporting(0);
     <?php require 'partials/nav.php'?>
     
     <article>
+        <?php
+        if (isset($_SESSION['cod_user'])) {
+            echo
+            '<div class="title"><h4>'.$_SESSION['nom_usu']." ".$_SESSION['apellido_usu'].'</h4></div>';
+        }
+        
+        ?>
         <div class="user-info-container">
             <?php
             if (isset($_SESSION['cod_user'])) {
                 echo  
                 '<div class="user-elementos-container">'.
-                    '<h4>Tu cuenta</h4>'.
+                    '<div class="info-title"><h4>Tus datos</h4></div>'.
                     '<div class="datos-container">'.
-                        '<p><b>Tu ID</b><br>'.$_SESSION['cod_user'].'</p>'.
-                        '<p><b>Nombre</b><br>'.$_SESSION['nom_usu'].'</p>'.
-                        '<p><b>Apellido</b><br>'.$_SESSION['apellido_usu'].'</p>'.
-                        '<p><b>Teléfono</b><br>'.$_SESSION['tel_usu'].'</p>'.
-                        '<p><b>Correo</b><br>'.$_SESSION['email_usu'].'</p>'.
-                        '<p><b>Usuario desde</b><br>'.$_SESSION['fecha_usu'].'</p>';
+                        '<div><h5>Nombre</h5><p>'.$_SESSION['nom_usu'].'</p></div>'.                    
+                        '<div><h5>Apellido</h5><p>'.$_SESSION['apellido_usu'].'</div>'.
+                        '<div><h5>Tu ID</h5><p>'.$_SESSION['cod_user'].'</p></div>'.
+                        '<div><h5>Teléfono</h5><p>'.$_SESSION['tel_usu'].'</p></div>'.
+                        '<div><h5>Correo</h5><p>'.$_SESSION['email_usu'].'</p></div>'.
+                        '<div><h5>Usuario desde</h4><p>'.$_SESSION['fecha_usu'].'</p></div>';
                         if ($_SESSION['dir_usu'] != null) {
                             echo
-                            '<p><b>Ultima dirección</b><br><a class="dato" href="direccion.php" title="Editar dirección">'.$_SESSION['dir_usu'].'</a></p>'.
+                            '<div><h5>Ultima dirección</h5><p><a class="dato" href="direccion.php" title="Editar dirección">'.$_SESSION['dir_usu'].'</a></p></div>'.
                             '</div>';
                         }else{
                             echo
-                            '<p><b>Ultima dirección</b><br><a class="dato" href="direccion.php" title="Agregar dirección">No hay dirección asociada</a></p>'.
+                            '<div><h5>Ultima dirección</h5><p><a class="dato" href="direccion.php" title="Agregar dirección">No hay dirección asociada</a></p></div>'.
                             '</div>';
                         }
                         echo
-                '</div>'.
-                '<a class="btn_logout" href="service/sesion/cerrarSesion.php"><span>Cerrar sesión</span></a>';
+                        '<div class="editar"><a href="editUser.php">Editar datos</a></div>';
+					if (isset($_GET['congrat'])) {
+						switch ($_GET['congrat']) {
+							case '1':
+								echo '<p class="congrat">¡Datos cambiados correctamente!</p>';
+								break;							
+							default:
+								break;
+						}
+					}
+				
+                echo
+                '</div>';
+                
             }else{
                 echo
                     '<div class="error-container">'.

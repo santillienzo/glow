@@ -12,7 +12,10 @@ $usuario = $_SESSION['cod_user'];
 $sql="select *,ped.estado_ped estadoped from pedido ped
 inner join productos pro
 on ped.id_producto=pro.id_producto
-inner join estados_ped on ped.estado_ped = estados_ped.estado_ped
+inner join estados_ped 
+on ped.estado_ped = estados_ped.estado_ped
+inner join entregas
+on ped.id_entrega = entregas.id_entrega
 where ped.estado_ped =2 and cod_user = $usuario";
 $result=mysqli_query($con,$sql);
 while($row=mysqli_fetch_array($result)){
@@ -23,6 +26,8 @@ while($row=mysqli_fetch_array($result)){
 	$obj->nombre_producto=$row['nombre_producto'];
 	$obj->des_producto=$row['des_producto'];
 	$obj->cantidad=$row['cantidad'];
+	$obj->id_entrega=$row['id_entrega'];
+	$obj->textEntrega=$row['descri_entrega'];
 	$obj->fecha_pedido=$row['fecha_pedido'];
 	$obj->dirusuped=$row['dirusuped'];
 	$obj->telusuped=$row['telusuped'];

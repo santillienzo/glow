@@ -26,7 +26,9 @@
 
     <article class="article">
         <div class="title">
-            <h3>PREGUNTAS MÁS FRECUENTES</h3>
+            <h3>FAQ</h3>
+            <h4>FREQUENTLY ASKED QUESTIONS</h4>
+            <h5>(Preguntas más frecuentes)</h5>
         </div>
         <section class="faq">
             <div class="preguntas-container">

@@ -1,0 +1,140 @@
+
+/*--------------------RESPONSIVE--------------------*/
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px){
+    article{
+        background-color: #ccc;
+        width: 100%;
+        min-height: 83vh;
+        padding: 15px 0;
+    }
+    .relleno-container{
+        width: 95%;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 2px #000;
+    }
+    
+    .relleno{
+        width: 95%;
+        margin: auto;
+        padding: 25px;
+    }
+    
+    .item-pedido{
+        height: 250px;
+        padding: 15px;
+        border-bottom: 1px solid #000;
+    }
+    
+    .pedido-img{
+        width: 30%;
+        height: 100%;
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .pedido-img img{
+        width:  100%;
+        object-fit: cover;
+        border-radius: 2px;
+        box-shadow: 0 0 2px #000;
+    }
+    
+    .pedido-detalle{
+        width: 70%;
+        height: 100%;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #bb8669; */
+    }
+    
+    .box-detalle{
+        margin-left: 15px;
+        color: #000;
+    }
+    
+    .box-detalle *{
+        margin: 15px 0 ;
+    }
+    
+    
+    .box-detalle h3{
+        text-transform: uppercase;
+    }
+    
+    .btn-comprar{
+        border: none;
+        padding: 8px 15px;
+        margin: 15px;
+        background-color: rgb(78, 140, 177);
+        color: #fff;
+        border-radius: 5px;
+    }
+    
+    .btn-comprar-container{
+        text-align: right;
+    }
+    
+    .btn-comprar:hover{
+        cursor: pointer;
+    }
+    
+    .btn-comprar:focus{
+        outline: none;
+    }
+    
+    .footer{
+    
+        border-top: 1px solid #111;
+    
+        /* background: rgb(255,255,255);
+        background: linear-gradient(0deg, rgba(255,255,255,1) 62%, rgba(233,233,233,1) 82%, rgba(222,222,222,1) 87%, rgba(218,218,218,1) 91%, rgba(212,212,212,1) 93%, rgba(209,209,209,1) 97%, rgba(204,204,204,1) 100%); */
+    }
+    
+    .datos-container{
+        margin-right: 15px;
+        text-align: right;
+    }
+    
+    .datos-container p span, .datos-container a span{
+        font-weight: bold;
+        margin-right: 5px;
+    }
+    
+    .cont{
+        font-weight: 400;
+        text-decoration: underline;
+        color: #4E8CB1;
+    }
+    
+    .eliminar span{
+        color: rgb(209, 100, 100);
+        text-decoration: underline;
+    }
+    
+    .error{
+        height: 78vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .error span{
+        color: rgb(78, 140, 177);
+    }
+}

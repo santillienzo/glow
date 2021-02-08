@@ -1,5 +1,6 @@
 <?php
     session_start();
+    error_reporting(0);
 ?>
 
 <!DOCTYPE html>
@@ -8,10 +9,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/rellenoCarrito.css">
     <link rel="stylesheet" href="style/object/nav.css">
     <link rel="stylesheet" href="style/object/copy.css">
+    <link rel="stylesheet" href="style/rellenoCarrito.css">
+    <link rel="stylesheet" href="style/res-rellenoCarrito.css">
     <link rel="icon" href="Images/ico.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,20 +30,9 @@
             
             </div>
             <?php
-            echo
-            '<div class="datos-container pedido">'.
-                '<p><span>Subtotal:</span><span id="montoTotal"></span></p>'.
-                '<p><span>N° de teléfono:</span>'.$_SESSION['tel_usu'].'</p>';
-                if ($_SESSION['dir_usu'] != NULL) {
-                    echo
-                    '<p><span>Dirección</span><p class="cont-pedido">'.$_SESSION['dir_usu'].'</p></p>';
-                }else{
-                    echo
-                    '<p><span>Dirección</span><p class="cont-pedido">No hay ninguna dirección asociada</p></p>';
-                }
-                echo
-            '</div>';
+            require 'pagar.php';
             ?>
+            
         </div>
     </article>
 
@@ -71,6 +61,7 @@
                                     '<p><b>Fecha:</b>'+data.datos[i].fecha_pedido+'</p>'+
                                     '<p><b>Cantidad:</b>'+data.datos[i].cantidad+'</p>'+
                                     '<p><b>Estado:</b>'+data.datos[i].estadotext+'</p>'+
+                                    '<p><b>Entrega:</b>'+data.datos[i].textEntrega+'</p>'+
                                 '</div>' +
                             '</div>'+
                         '</div>';
@@ -93,6 +84,16 @@
     </script>
 
     <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript">
+    function cancelar_compra(){
+        var respuesta =confirm("¿Estás seguro que deseas cancelar el pedido?"); 
+        if (respuesta == true) {
+            window.location.href = "service/pedido/cancelar.php?id=<?php echo $_SESSION['cod_user']; ?>";
+        }else{
+            return false;
+        }
+    }
 
+    </script>
 </body>
 </html>

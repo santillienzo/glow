@@ -28,6 +28,7 @@
                 <th scope="col">ESTADO</th>
                 <th scope="col">RUTA DE IMAGEN</th>
                 <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -135,5 +136,6 @@
         
     <a href="admin.php" class="back"><span>ATRÁS</span></a>
 
+    
 </body>
 </html>

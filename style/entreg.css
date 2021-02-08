@@ -64,6 +64,8 @@ article{
 .option input:checked + label{
     background-color: #333;
     color: #fff;
+    border-left: 5px solid #000;
+
 }
 
 .option input:checked + label::before{
@@ -80,6 +82,10 @@ article{
 
 .option a{
     text-decoration: underline;
+}
+
+.option input:checked + label a{
+    color: #ddd;
 }
 
 
@@ -107,6 +113,14 @@ article{
     outline: none;
 }
 
+.e{
+    display: inline-block;
+    color: rgb(226, 46, 46);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
 
 
 
@@ -115,3 +129,34 @@ article{
 
 
 
+
+
+/****************   RESPONSIVE    *******************/
+
+
+
+
+
+
+
+@media screen and (max-width:700px){
+
+
+    .option label::before{
+        content: "";
+        height: 10px;
+        width: 10px;
+        border: none;
+        border-radius: 0;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+
+    .option input:checked + label::before{
+        height: 10px;
+        width: 10px;
+        border: none;
+        background-color: transparent;
+    }
+}

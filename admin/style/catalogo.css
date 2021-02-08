@@ -206,14 +206,30 @@ caption {
 .tabla-productos thead th:nth-child(7) {
     width: 5%;
 }
+.tabla-productos thead th:nth-child(8) {
+    width: 5%;
+}
 
 .tabla-productos th, td {
+    padding: 20px;
+}
+
+.tabla-productos th, td input {
     padding: 20px;
 }
 
 .tabla-productos tbody td {
     text-align: center;
 }
+
+.tabla-productos tbody td input,.tabla-productos tbody td button{
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+
 
 .tabla-productos thead{
     background-color: #B45434;
