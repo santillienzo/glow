@@ -11,8 +11,8 @@ else{
     $cod_user= $_SESSION['cod_user'];
     $id_producto= $_POST['id_producto'];
     $cantidad= $_POST['cantidad'];
-    $sql = "INSERT INTO pedido(cod_user,id_producto,cantidad,fecha_pedido,estado_ped,dirusuped,telusuped)
-            VALUES ($cod_user,$id_producto,$cantidad,now(),1,'','')";
+    $sql = "INSERT INTO pedido(cod_user,id_producto,cantidad,fecha_pedido,estado_ped)
+            VALUES ($cod_user,$id_producto,$cantidad,now(),1)";
     $result= mysqli_query($con,$sql);
     if($result){
         $response->state=true;

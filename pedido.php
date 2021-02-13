@@ -49,8 +49,6 @@
                             '</div>'+
                             '<div class="datos-container pedido">'+
                                 '<p><span>Total:</span><span id="montoTotal"></span></p>'+
-                                '<p><span>N° de teléfono:</span>'+'<?php echo $_SESSION['tel_usu']; ?>'+'</p>'+
-                                '<?php if($_SESSION['dir_usu'] != NULL) { echo '<p><span>Dirección:</span>'.$_SESSION['dir_usu'].'</p>'; }else{ echo '<p><span>Dirección:</span>No hay ninguna dirección asociada</p>';}?>'+
                             '</div>'+
                             '<div class="btn-comprar-container">'+
                                 '<div class="cancelar" title="Cancelar compra" onclick="cancelar_compra()"><i class="fas fa-times"></i></div>'+
@@ -73,7 +71,6 @@
                                         '<p><b>Fecha:</b>'+data.datos[i].fecha_pedido+'</p>'+
                                         '<p><b>Cantidad:</b>'+data.datos[i].cantidad+'</p>'+
                                         '<p><b>Estado:</b>'+data.datos[i].estadotext+'</p>'+
-                                        '<p><b>Entrega:</b>'+data.datos[i].textEntrega+'</p>'+
                                     '</div>' +
                                 '</div>'+
                             '</div>';
@@ -116,7 +113,7 @@
     function confirm_compra(){
         var respuesta =confirm("¿Estás seguro que deseas confirmar el pedido?"); 
         if (respuesta == true) {
-            window.location.href = "service/pedido/confirm_compra.php";
+            window.location.href = "entreg.php";
         }else{
             return false;
         }

@@ -28,7 +28,7 @@
             <div class="title-container">
                 <h3>¿Donde deseas retirar el pedido?</h3>
             </div>
-            <form action="service/pedido/confirm.php" method="POST">
+            <form action="service/pedido/confirm_compra.php" method="POST">
                 <div class="option">
                     <input type="radio" name="optio-radio" value="domicilio" id="option1">
                     <label for="option1">
@@ -77,7 +77,7 @@
 								echo '<p class="e">Por favor selecciona una opcion de entrega.</p>';
 								break;							
 							case '3':
-								echo '<p class="e">Ya tienes un pedido pendiente. Si quieres agregar más productos completa tu <a href="pedido.php" title="Continuar pedido">pedido</a> o cancelalo.</p>';
+								echo '<p class="e">Ya tienes un pedido pendiente. Si quieres agregar más productos completa tu <a href="compra.php" title="Continuar pedido">pedido</a> o cancelalo.</p>';
 								break;							
 							default:
 								break;

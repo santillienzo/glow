@@ -113,7 +113,7 @@
 
 
         function elegirEntrega(){
-            window.location.href="entreg.php";
+            window.location.href="service/pedido/confirm.php";
         }
 
         function formato_precio(valor){
