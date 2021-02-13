@@ -2,7 +2,8 @@
 /*******************ARTICLE*/
 .article{
     margin: 0;
-    min-height: 83vh;
+    min-height: 85vh;
+    margin-top: 15vh;
     background: url('../Images/fondo/fondo-faq.jpg');
 }
 
@@ -84,7 +85,8 @@
     /*******************ARTICLE*/
     .article{
         margin: 0;
-        min-height: 83vh;
+        margin-top: 15vh;
+        min-height: 85vh;
         background: url('../Images/fondo/fondo-faq.jpg');
     }
     

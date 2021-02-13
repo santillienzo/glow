@@ -2,7 +2,8 @@
 /*********************ARTICLE*****************/
 
 .article{
-    min-height: 83vh;
+    min-height: 85vh;
+    margin-top: 15vh;
     text-align: center;
     display: flex;
     align-items: center;
@@ -100,7 +101,8 @@
 /*********************ARTICLE*****************/
 
 .article{
-    min-height: 83vh;
+    margin-top: 15vh;
+    min-height: 85vh;
     text-align: center;
     display: flex;
     align-items: center;

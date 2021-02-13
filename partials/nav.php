@@ -40,6 +40,12 @@
                     <a href="pedido.php"><li><i class="fas fa-genderless"></i><p>Mis pedidos</p></li></a>
                 </div>
                 <div class="items-nav">
+                    <a href="compra.php"><li><i class="fas fa-genderless"></i><p>Compras Pendientes</p></li></a>
+                </div>
+                <div class="items-nav">
+                    <a href="historial.php"><li><i class="fas fa-genderless"></i><p>Historial de compras</p></li></a>
+                </div>
+                <div class="items-nav">
                     <a href="politicaDev.php"><li><i class="fas fa-genderless"></i><p>Política de devolución</p></li></a>
                 </div>
                 <?php
@@ -110,3 +116,11 @@
             <div class="text2 text"><p>MADE WITH LOVE</p></div>
         </div>
     </header>
+
+
+    <script type="text/javascript">
+    window.addEventListener("scroll",function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY > 5);
+    });
+    </script>

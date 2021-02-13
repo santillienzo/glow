@@ -81,7 +81,9 @@ error_reporting(0);
                 
             }
             ?>
+            
         </div>
+        <a href="service/sesion/cerrarSesion.php">CERRAR</a>
         
     </article>
     <?php require 'partials/foot.php'?>

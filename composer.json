@@ -1,6 +1,0 @@
-{
-    "name": "enzo1/glow",
-    "require": {
-        "mercadopago/dx-php": "^2.2"
-    }
-}

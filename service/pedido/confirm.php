@@ -1,5 +1,8 @@
 <?php
     session_start();
+    $response=new stdClass();
+    $cod_user= $_SESSION['cod_user'];
+    include('../_conexion.php');
 
     
     function sql($val_entreg){
@@ -25,19 +28,31 @@
     }
 
 
-    if ($_REQUEST['optio-radio'] == "domicilio") {
-        if ($_SESSION['dir_usu'] == NULL) {
-            header("Location: ../../entreg.php?e=1");
-        }else{
-            sql(1);
+    $pedido = "SELECT * FROM pedido WHERE cod_user= $cod_user AND estado_ped = 2";
+    $pedido_result = mysqli_query($con,$pedido);
+    $i = 0;
+    
+    
+    
+    if ($row=mysqli_fetch_array($pedido_result)) {
+        header("Location: ../../entreg.php?e=3");
+    }else{
+        if ($_REQUEST['optio-radio'] == "domicilio") {
+            if ($_SESSION['dir_usu'] == NULL) {
+                header("Location: ../../entreg.php?e=1");
+            }else{
+                sql(1);
+            }
+        }elseif ($_REQUEST['optio-radio'] == "local") {
+            sql(2);
+        }elseif ($_REQUEST['optio-radio'] == "punto_comun") {
+            sql(3);
+        }elseif ($_REQUEST['optio-radio'] == NULL){
+            header("Location: ../../entreg.php?e=2");
         }
-    }elseif ($_REQUEST['optio-radio'] == "local") {
-        sql(2);
-    }elseif ($_REQUEST['optio-radio'] == "punto_comun") {
-        sql(3);
-    }elseif ($_REQUEST['optio-radio'] == NULL){
-        header("Location: ../../entreg.php?e=2");
     }
+
+
 
     ?>
 

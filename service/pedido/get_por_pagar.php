@@ -1,7 +1,7 @@
 <?php
 include('../_conexion.php');
-$response=new stdClass();
 session_start();
+$response=new stdClass();
 
 
 

@@ -24,8 +24,15 @@ li{
 
 
 .header{
-    height: 17vh;
+    height: 15vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000000000;
+    opacity: 1;
 }
+
 
 /***********/
 
@@ -34,7 +41,7 @@ li{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: white;
+    background-color: #fff;
     z-index: 1000;
 }
 
@@ -153,7 +160,15 @@ li{
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: 100%;
     align-items: center;
+    transition: background .2s ease-in;
 }
+
+.sticky .part-superior{
+    background-color: #fff;
+    opacity: .8;
+    transition: background .2s ease-in,opacity .2s ease-in;
+}
+
 
 .icono-menu-container{
     justify-self: start;
@@ -163,6 +178,12 @@ li{
 .icono-menu{
     color: #fff;
     font-size: 25px;
+    transition: color .2s ease-in;
+}
+
+.sticky .icono-menu{
+    color:#B45434;
+    transition: color .2s ease-in;
 }
 
 .icono-menu:hover{
@@ -178,6 +199,12 @@ li{
     color: #fff;
     font-size: 40px;
     letter-spacing: 25px;
+    transition: color .4s ease-in;
+}
+
+.sticky .titulo{
+    color:#B45434;
+    transition: color .4s ease-in;
 }
 
 .option-container{
@@ -191,6 +218,13 @@ li{
     font-size: 25px;
     font-weight: 400;
     margin-right: 10px;
+    transition: color .4s ease-in;
+}
+
+
+.sticky .item-option{
+    color:#B45434;
+    transition: color .4s ease-in;
 }
 
 .item-option:hover{
@@ -224,7 +258,13 @@ li{
     background-color: #C7774D;
     height: 25%;
     width: 100%;
+    margin: auto;
 }
+
+.sticky .part-inferior{
+    opacity: 0;
+}
+
 
 .text1{
     display: flex;

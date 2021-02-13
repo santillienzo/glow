@@ -76,6 +76,9 @@
 							case '2':
 								echo '<p class="e">Por favor selecciona una opcion de entrega.</p>';
 								break;							
+							case '3':
+								echo '<p class="e">Ya tienes un pedido pendiente. Si quieres agregar más productos completa tu <a href="pedido.php" title="Continuar pedido">pedido</a> o cancelalo.</p>';
+								break;							
 							default:
 								break;
 						}

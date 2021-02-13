@@ -109,25 +109,7 @@
             });
         });
 
-        function procesar_compra(){
-                $.ajax({
-				url:'service/pedido/confirm.php',
-				type:'POST',
-				data:{
-                },
-				success:function(data){
-                    console.log(data);
-                    if(data.state){
-                        window.location.href="pedido.php"
-                    }else{
-                        alert(data.detail);
-                    }
-                    },
-                    error:function(err){
-                        console.error(err);
-                    }
-                });
-        }
+        
 
 
         function elegirEntrega(){

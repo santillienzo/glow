@@ -1,9 +1,11 @@
 
 /************ARTICLE**********/
 /*objeto*/
-
+article{
+    margin-top: 15vh;
+}
 .objeto{
-    height: 83vh;
+    height: 85vh;
     border-bottom: 1px solid #ccc;
 }
 

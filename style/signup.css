@@ -1,5 +1,6 @@
 .article{
-    min-height: 83vh;
+    min-height: 85vh;
+    margin-top: 15vh;
     text-align: center;
     display: flex;
     align-items: center;
@@ -120,7 +121,8 @@
 
 @media screen and (max-width:700px){
     .article{
-        min-height: 83vh;
+        min-height: 85vh;
+        margin-top: 15vh;
         text-align: center;
         display: flex;
         align-items: center;
