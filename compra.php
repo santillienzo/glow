@@ -82,9 +82,11 @@
                             '<div class="dato"><h5>Tu email</h5><p>'+data.datos[i].email_usu+'</p></div>'+
                             '<div class="dato"><h5>Entrega</h5><p>'+data.datos[i].id_entrega+'</p></div>'+
                             '<div class="dato"><h5>Cantidad de productos</h5><p>'+data.datos[i].cantidad_pro+'</p></div>'+
-                            '<div class="dato"><h5>Precio final</h5><p>'+data.datos[i].precio_final+'</p></div>'+
                             '<div class="dato"><h5>Fecha de la compra</h5><p>'+data.datos[i].fecha_pedido+'</p></div>'+
-                            '<div class="dato"><h5>Estado de la compra</h5><p>'+data.datos[i].estado_compra+'</p></div>';
+                            '<div class="dato"><h5>Estado de la compra</h5><p>'+data.datos[i].estado_compra+'</p></div>'+
+                            '<div class="dato precio"><h5>Precio parcial</h5><p>ARS $'+data.datos[i].precio_parcial+'</p></div>'+
+                            '<div class="dato precio"><h5>Precio envio</h5><p>ARS $'+data.datos[i].precio_envio+'</p></div>'+
+                            '<div class="dato preciop"><h5>Precio final</h5><p>ARS $'+data.datos[i].precio_final+'</p></div>';
                             
                         }
                         for (var i = 0; i < data.prod.length; i++) {

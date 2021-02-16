@@ -81,14 +81,55 @@ article{
     transition: background .25s ease;
 }
 
-.option a{
+.option label p span{
+    color: rgb(247, 70, 70);
+}
+
+.option label a{
     text-decoration: underline;
 }
 
 .option input:checked + label a{
-    color: #ddd;
+    color: #fff;
 }
 
+.inputs{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.inputs input{
+    width: 50%;
+    padding:  20px 15px;
+    margin-top: 25px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.inputs input:focus{
+    outline: none;
+    border: none;
+}
+
+.inputs input::placeholder{
+    color: #000;
+}
+
+.entrega_option{
+    width: 90%;
+    margin: auto;
+}
+
+.entrega_option-container{
+    width: 50%;
+    margin: auto;
+}
+
+.entrega_option input{
+    margin: 15px;
+}
 
 /********************/
 
@@ -165,5 +206,65 @@ article{
         width: 10px;
         border: none;
         background-color: transparent;
+    }
+
+    .inputs{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .inputs input{
+        width: 90%;
+        padding:  20px 15px;
+        margin-top: 25px;
+        border: none;
+        background-color: #ddd;
+        border-radius: 5px;
+    }
+    
+    .inputs input:focus{
+        outline: none;
+        border: none;
+    }
+    
+    .inputs input::placeholder{
+        color: #000;
+    }
+    
+    .entrega_option{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .entrega_option-container{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .entrega_option input{
+        margin: 15px;
+    }
+
+    .btn-comprar{
+        border: none;
+        padding: 15px 15px;
+        margin: 15px;
+        background-color: rgb(78, 140, 177);
+        color: #fff;
+        border-radius: 5px;
+        
+    }
+    
+    .btn-comprar-container{
+        text-align: center;
+    }
+    
+    .btn-comprar:hover{
+        cursor: pointer;
+    }
+    
+    .btn-comprar:focus{
+        outline: none;
     }
 }

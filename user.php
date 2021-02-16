@@ -47,16 +47,8 @@ error_reporting(0);
                         '<div><h5>Tu ID</h5><p>'.$_SESSION['cod_user'].'</p></div>'.
                         '<div><h5>Teléfono</h5><p>'.$_SESSION['tel_usu'].'</p></div>'.
                         '<div><h5>Correo</h5><p>'.$_SESSION['email_usu'].'</p></div>'.
-                        '<div><h5>Usuario desde</h4><p>'.$_SESSION['fecha_usu'].'</p></div>';
-                        if ($_SESSION['dir_usu'] != null) {
-                            echo
-                            '<div><h5>Ultima dirección</h5><p><a class="dato" href="direccion.php" title="Editar dirección">'.$_SESSION['dir_usu'].'</a></p></div>'.
-                            '</div>';
-                        }else{
-                            echo
-                            '<div><h5>Ultima dirección</h5><p><a class="dato" href="direccion.php" title="Agregar dirección">No hay dirección asociada</a></p></div>'.
-                            '</div>';
-                        }
+                        '<div><h5>Usuario desde</h4><p>'.$_SESSION['fecha_usu'].'</p></div>'.
+                        '</div>';
                         echo
                         '<div class="editar"><a href="editUser.php">Editar datos</a></div>';
 					if (isset($_GET['congrat'])) {
@@ -83,7 +75,6 @@ error_reporting(0);
             ?>
             
         </div>
-        <a href="service/sesion/cerrarSesion.php">CERRAR</a>
         
     </article>
     <?php require 'partials/foot.php'?>

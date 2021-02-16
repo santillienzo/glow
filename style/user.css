@@ -95,11 +95,7 @@ article{
     border-left: 15px solid #03588C;
 }
 
-.datos-container div:nth-child(7){
-    float: none;
-    margin: auto;
-    clear: both;
-}
+
 
 .editar{
     width: fit-content;

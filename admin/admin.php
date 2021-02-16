@@ -29,7 +29,7 @@
                 <p>Catálogo</p>
             </div>
         </a>        
-        <a href="pedi_admin.php">
+        <a href="pack_admin.php">
             <div class="carta tres">
                 <p>Pedidos/Compras</p>
             </div>

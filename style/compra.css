@@ -95,3 +95,13 @@ article{
 .btn-container button:focus{
     outline: none;
 }
+
+.precio p{
+    color: rgb(107, 48, 175);
+    font-size: 20px;
+}
+
+.preciop p{
+    font-size: 20px;
+    color: red;
+}

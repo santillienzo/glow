@@ -13,39 +13,43 @@
     <title>ADMINISTRACIÓN</title>
 </head>
 <body>
-    <div class="title-container">
-        <h4><a href="compras_admin.php">COMPRAS</a></h4>
-        <h4>TABLA DE PEDIDOS GLOW</h4>
-        <h4><a href="carrito_admin.php">EN CARRITO</a></h4>
-    </div>
+    <header>
+        <div class="title-container">
+            <a href="admin.php">INICIO PANEL</a>
+            <h4>TABLA DE PAQUETES GLOW</h4>
+            <a href="pedidos.php"><span>PEDIDOS</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+    </header>
     
+    
+
     <table class="tabla">
         <caption>PEDIDOS</caption>
         <thead>
             <tr>
-                <th scope="col">ID PEDIDO</th>
+                <th scope="col">ID COMPRA</th>
                 <th scope="col">USUARIO N°</th>
                 <th scope="col">NOMBRE</th>
                 <th scope="col">APELLIDO</th>
-                <th scope="col">PRODUCTO N°</th>
-                <th scope="col">PRODUCTO</th>
-                <th scope="col">CANTIDAD</th>
-                <th scope="col">FECHA</th>
-                <th scope="col">ESTADO</th>
-                <th scope="col">DIRECCIÓN</th>
                 <th scope="col">TELÉFONO</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">ENTREGA</th>
+                <th scope="col">CANTIDAD OBJETOS</th>
+                <th scope="col">PRECIO</th>
+                <th scope="col">FECHA</th>
+                <th scope="col">DIRECCIÓN</th>
+                <th scope="col">ESTADO</th>
+                <th scope="col">CONDICIÓN</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             <?php 
-            require 'php/pedi_usu.php';
+            require 'php/pack_usu.php';
             ?>
         </tbody>
     </table>
-    <div class="back-cont">
-        <a href="admin.php" class="back"><span>ATRÁS</span></a>
-    </div>
+    
 
 </body>
 </html>

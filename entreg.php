@@ -34,15 +34,7 @@
                     <label for="option1">
                         <div class="text-container">
                             <h3>Domicilio</h3>
-                            <?php
-                                if($_SESSION['dir_usu'] != NULL){
-                                    echo
-                                    '<a href="direccion.php" title="Cambiar"><span>Dirección:</span><span class="cont">'.$_SESSION['dir_usu'].'</span></a>';
-                                }else{
-                                    echo
-                                    '<a href="direccion.php" title="Agregar dirección"><span>Dirección:</span><span class="cont">No hay ninguna dirección asociada.</span></a>';
-                                }
-                            ?>
+                            <p>El envío a domicilio tiene un valor de ARS$80 a cualquier parte de San martín-Mendoza.</p>
                         </div>
                     </label>
                 </div>
@@ -59,9 +51,30 @@
                     <label for="option3">
                         <div class="text-container">
                             <h3>Punto en común</h3>
-                            <p>Para esto: Comunicarte por WhatsApp y coordinar la entrega del producto. <a href="https://wa.me/542634759547" target="_BLANK">Haz click aquí</a> para redirigirte al número, o bien hablale al WhatsApp de la página que se encuentra en la sección 'Contactos'.</p>
+                            <p>Se te enviará un mensaje por WhatsApp (o email) para coordinar un punto en común. Tiene un cargo de ARS $50. <span>Solo válido para San Martín-Mendoza</span> </p>
                         </div>
                     </label>
+                </div>
+                <div class="title-container">
+                    <h3>¿Donde deseas retirar el pedido?</h3>
+                    <p>(En caso de ser envio a domicilio)</p>
+                </div>
+                <div class="inputs">
+                    <input type="text" name="prov_envio" placeholder="Provincia">
+                    <input type="text" name="ciudad_envio" placeholder="Ciudad" >
+                    <input type="text" name="barrio_envio" placeholder="Barrio (Opcional)">
+                    <input type="text" name="calle_envio" placeholder="Calle/Cuadra/Manzana" >
+                    <input type="text" name="numero_envio" placeholder="Número" >
+                    <input type="text" name="depart_envio" placeholder="Departamento (Opcional)">
+                    <input type="text" name="postal_envio" placeholder="Código Postal" >
+                </div>
+                <div class="entrega_option">
+                    <div class="entrega_option-container">
+                        <input type="radio" name="entrega" id="entreg_casa" value="casa">
+                        <label for="entreg_casa">Entrega a domicilio</label><br>
+                        <input type="radio" name="entrega" id="entreg_sucu" value="sucursal">
+                        <label for="entreg_sucu">Entrega a sucursal más cercana</label>
+                    </div>
                 </div>
                 <div class="btn-comprar-container">
                         <button class="btn-comprar">Continuar comprar</button>
@@ -71,13 +84,19 @@
             if (isset($_GET['e'])) {
 						switch ($_GET['e']) {
 							case '1':
-								echo '<p class="e">No tienes ninguna dirección a la cual enviar. Por favor agrega una.</p>';
+								echo '<p class="e">Completa los campos de dirección.</p>';
 								break;							
 							case '2':
 								echo '<p class="e">Por favor selecciona una opcion de entrega.</p>';
 								break;							
 							case '3':
 								echo '<p class="e">Ya tienes un pedido pendiente. Si quieres agregar más productos completa tu <a href="compra.php" title="Continuar pedido">pedido</a> o cancelalo.</p>';
+								break;							
+							case '4':
+								echo '<p class="e">No tenemos envios hacia tu departamento. Cualquier consulta hablanos por WhatsApp (Puede haber un error en el código postal, intentalo de nuevo o escribenos).</p>';
+								break;							
+							case '5':
+								echo '<p class="e">El envío... ¿es a domicilio a una sucursal Andreani? Selecciona una opción.</p>';
 								break;							
 							default:
 								break;

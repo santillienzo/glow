@@ -86,14 +86,14 @@
             <div class="icono-menu-container">
                 <div class="icono-menu"><i class="fas fa-bars" id="menu-bars"></i></div>
             </div>
-            <div class="titulo-container"><a href="/"><h1 class="titulo">GLOW</h1></a></div>
-            <nav class="option-container">
+            <div class="titulo-container"><a href="/"><h1 class="titulo non-selectable">GLOW</h1></a></div>
+            <nav class="option-container non-selectable">
                 <input type="text" id="input-search" placeholder="Busca aquí...">
                 <li class="item-option" id="search" title="Buscar"><i class="fas fa-search"></i></li>
                 <li class="item-option" id="buscar" title="Buscar"><i class="fas fa-search"></i></li>
                 <?php
                 if(isset($_SESSION['cod_user'])){
-                    echo '<a href="user.php"><li class="item-option" id="user" title="Tu cuenta"><i class="fas fa-user"></i></li></a>';
+                    echo '<li class="item-option" id="user" title="Tu cuenta"><i class="fas fa-user"></i></li>';
                     
                 }else{
                 ?>
@@ -105,6 +105,10 @@
                     <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i></li>
                 </a>
             </nav>
+            <div class="perfil" id="panel">
+                <div><a href="user.php">Perfil</a></div>
+                <div><a href="service/sesion/cerrarSesion.php">Cerrar Sesión</a></div>
+            </div>
             <div class="responsive menu-responsive">
                 <a href="carrito.php">
                     <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i></li>

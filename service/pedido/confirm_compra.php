@@ -7,7 +7,26 @@
     
     $cod_user= $_SESSION['cod_user'];
 
-function compra($entrega){
+function compra($entrega,$envio){
+    
+    $provincia = ' ';
+    $ciudad = ' ';
+    $barrio = ' ';
+    $calle = ' ';
+    $numero = ' ';
+    $departamento = ' ';
+    $postal = ' ';
+    
+    if ($entrega = 1) {
+        $provincia= $_POST['prov_envio'];
+        $ciudad= $_POST['ciudad_envio'];
+        $barrio= $_POST['barrio_envio'];
+        $calle= $_POST['calle_envio'];
+        $numero= $_POST['numero_envio'];
+        $departamento= $_POST['depart_envio'];
+        $postal= $_POST['postal_envio'];
+        
+    }
 
     include('../_conexion.php');
     $response=new stdClass();
@@ -19,7 +38,6 @@ function compra($entrega){
     $apellido= $_SESSION['apellido_usu'];
     $telefono= $_SESSION['tel_usu'];
     $email= $_SESSION['email_usu'];
-    $dire= $_SESSION['dir_usu'];
 
     //BUSCAMOS TODOS LOS DATOS DEL PEDIDO
     $cantidad_final = 0;
@@ -53,8 +71,8 @@ function compra($entrega){
     }
 
     //INSERTAMOS LOS DATOS DE LA COMPRA EN LA BASE DE DATOS SQL EN LA TABLA 'compras'
-    $sql = "INSERT INTO compras(cod_user, nom_usu, apellido_usu, tel_usu, email_usu, id_entrega, cantidad_pro, precio_final,fecha_pedido, dirusu, estado_compra)
-            VALUES('$cod_user','$nombre','$apellido','$telefono','$email', '$entrega' , $cantidad_final,$precio,now(), '$dire' ,1)";
+    $sql = "INSERT INTO compras(cod_user, nom_usu, apellido_usu, tel_usu, email_usu, id_entrega, cantidad_pro, precio_parcial, precio_envio, precio_final,provincia, ciudad, barrio, calle, numero, departamento, postal, fecha_pedido, estado_compra)
+            VALUES('$cod_user','$nombre','$apellido','$telefono','$email', '$entrega' , $cantidad_final,$precio, $envio, $precio + $envio, '$provincia', '$ciudad', '$barrio', '$calle', '$numero', '$departamento', '$postal', now() ,1)";
     
     $result = mysqli_query($con,$sql);
     
@@ -73,15 +91,44 @@ if ($row=mysqli_fetch_array($result_verificacion)) {
     header("Location: ../../entreg.php?e=3");
 }else{
     if ($_REQUEST['optio-radio'] == "domicilio") {
-        if ($_SESSION['dir_usu'] == NULL) {
-            header("Location: ../../entreg.php?e=1");
+        if (strlen($_POST['prov_envio']) >= 1 &&
+        strlen($_POST['ciudad_envio']) >= 1 &&
+        strlen($_POST['calle_envio']) >= 1 &&
+        strlen($_POST['numero_envio']) >= 1 &&
+        strlen($_POST['postal_envio']) >= 1) {
+            $postal = $_POST['postal_envio'];
+            if ($postal == 5570) { // San Martín
+                compra(1,80);
+            }else if($postal == 5577 || $postal == 5573){ //JUNIN Y RIVADAVIA
+                compra(1,200);
+            }elseif($postal == 5590 || $postal == 5500 || $postal == 5502 || $postal == 5501 ||
+                    $postal == 5519 || $postal == 5521 || $postal == 5600 || $postal == 5602 ||
+                    $postal == 5613 || $postal == 5561 || $postal == 5667 || $postal == 5560 ||
+                    $postal == 5507 || $postal == 5504 || $postal == 5539 || $postal == 5540 ||
+                    $postal == 5512 || $postal == 5569 || $postal == 5590 || $postal == 5591 ||
+                    $postal == 5515 || $postal == 5620 || $postal == 5596){ //RESTO DE DEPARTAMENTOS
+                        
+                        if ($_REQUEST['entrega'] == "casa") {
+                            compra(1,650);
+                        }elseif ($_REQUEST['entrega'] == "sucursal") {
+                            compra(1,450);
+                        }else{
+                            header("Location: ../../entreg.php?e=5");
+                        }
+            } else{
+                header("Location: ../../entreg.php?e=4");
+            }
         }else{
-            compra(1);
+            header("Location: ../../entreg.php?e=1");
         }
+        
     }elseif ($_REQUEST['optio-radio'] == "local") {
-        compra(2);
+        compra(2,0);
     }elseif ($_REQUEST['optio-radio'] == "punto_comun") {
-        compra(3);
+        compra(3,50);
+    }
+    else{
+        header("Location: ../../entreg.php?e=2");
     }
 }
 

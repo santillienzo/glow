@@ -92,3 +92,18 @@ function search_product_r(){
 }
 
 
+//ABRIR Y CERRAR PANEL DEL PERFIL
+const user = document.getElementById('user');
+const panel = document.getElementById('panel');
+var deci = false
+
+user.addEventListener("click",()=>{
+    if (deci == false) {
+        panel.style.display = 'block';
+        deci = true
+    }else{
+        panel.style.display = 'none';
+        deci = false
+    }
+});
+

@@ -59,7 +59,7 @@ li{
     table-layout: fixed;
     margin: auto;
     border-collapse: collapse;
-    border: 3px solid #3d1d6d;
+    border: 3px solid #8C041D;
     border-bottom: none;
     box-shadow: 0px 25px 15px 8px #222;
 }
@@ -70,7 +70,7 @@ li{
 }
 
 .tabla thead th{
-    border: 1px solid #AC84E8;
+    border: 1px solid #D96277;
 }
 
 .tabla thead th:nth-child(1) {
@@ -124,24 +124,24 @@ li{
 
 
 .tabla thead{
-    background-color: #3d1d6d;
+    background-color: #8C041D;
     color: #dddddd;
 }
 
 .tabla tbody  tr:nth-child(odd){
-    background-color: #AC84E8;
+    background-color: #D96277;
     color: #ffffff;
     transition: background .1s ease-in;
 }
 
 .tabla tbody  tr:nth-child(even){
-    background-color: #9a77cf;
+    background-color: #BF0B2C;
     color: #ffffff;
     transition: background .1s ease-in;
 }
 
 .tabla tbody tr:hover{
-    background-color:  #8d61cf;
+    background-color:  #af343e;
     transition: background .1s ease-in;
 }
 
@@ -160,7 +160,7 @@ caption {
     text-align: center;
     letter-spacing: 1px;
     border-top: none;
-    background-color: #336;
+    background-color: #ad364c;
 }
 
 .back-cont{
