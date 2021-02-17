@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (isset($_SESSION['cod_user'])) {
+    $cod_admin = $_SESSION['cod_user'];
+    if ($cod_admin == 1) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +35,7 @@
                 <p>Catálogo</p>
             </div>
         </a>        
-        <a href="pack_admin.php">
+        <a href="administrarPedidos.php">
             <div class="carta tres">
                 <p>Pedidos/Compras</p>
             </div>
@@ -38,3 +44,8 @@
     <a href="../index.php" class="back"><span>INICIO</span></a>
 </body>
 </html>
+
+<?php
+    }
+}
+?>

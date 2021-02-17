@@ -57,7 +57,7 @@ li{
     position: relative;
     top: 100px;
     table-layout: fixed;
-    margin: auto;
+    margin: 15px;
     border-collapse: collapse;
     border: 3px solid #3d1d6d;
     border-bottom: none;
@@ -174,4 +174,14 @@ caption {
     margin-left: 25px;
     text-decoration:underline ;
     margin-top: 15px;
+}
+
+
+
+input{
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    background-color: #eee;
 }

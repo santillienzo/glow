@@ -56,13 +56,13 @@ li{
 .tabla {
     position: relative;
     top: 100px;
+    margin: 15px;
     table-layout: fixed;
-    width: 95%;
-    margin: auto;
     border-collapse: collapse;
-    border: 3px solid #8C041D;
+    border: 3px solid #080E33;
     border-bottom: none;
     box-shadow: 0px 25px 15px 8px #222;
+    
 }
 
 .tabla thead tr{
@@ -71,7 +71,7 @@ li{
 }
 
 .tabla thead th{
-    border: 1px solid #D96277;
+    border: 1px solid #192DA1;
 }
 
 .tabla thead th:nth-child(1) {
@@ -125,24 +125,24 @@ li{
 
 
 .tabla thead{
-    background-color: #8C041D;
+    background-color: #080E33;
     color: #dddddd;
 }
 
 .tabla tbody  tr:nth-child(odd){
-    background-color: #D96277;
+    background-color: #192DA1;
     color: #ffffff;
     transition: background .1s ease-in;
 }
 
 .tabla tbody  tr:nth-child(even){
-    background-color: #BF0B2C;
+    background-color: #2039CC;
     color: #ffffff;
     transition: background .1s ease-in;
 }
 
 .tabla tbody tr:hover{
-    background-color:  #af343e;
+    background-color:  #111E6C;
     transition: background .1s ease-in;
 }
 
@@ -161,7 +161,7 @@ caption {
     text-align: center;
     letter-spacing: 1px;
     border-top: none;
-    background-color: #ad364c;
+    background-color: rgb(28, 28, 83);
 }
 
 .back-cont{

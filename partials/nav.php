@@ -36,14 +36,19 @@
                 <div class="items-nav">
                     <a href="FAQ.php"><li><i class="fas fa-genderless"></i><p>FAQ</p></li></a>
                 </div>
-                <div class="items-nav">
-                    <a href="pedido.php"><li><i class="fas fa-genderless"></i><p>Mis pedidos</p></li></a>
+                <div class="items-nav" id="compra-btn">
+                    <li><i  id="i-compra"></i><p>Compras</p></li>
                 </div>
-                <div class="items-nav">
-                    <a href="compra.php"><li><i class="fas fa-genderless"></i><p>Compras Pendientes</p></li></a>
-                </div>
-                <div class="items-nav">
-                    <a href="historial.php"><li><i class="fas fa-genderless"></i><p>Historial de compras</p></li></a>
+                <div id="items-compras">
+                    <div class="item-compra">
+                        <a href="pedido.php"><li><i class="fas fa-genderless"></i><p>Mis pedidos</p></li></a>
+                    </div>
+                    <div class="item-compra">
+                        <a href="compra.php"><li><i class="fas fa-genderless"></i><p>Compras Pendientes</p></li></a>
+                    </div>
+                    <div class="item-compra">
+                        <a href="historial.php"><li><i class="fas fa-genderless"></i><p>Historial de compras</p></li></a>
+                    </div>
                 </div>
                 <div class="items-nav">
                     <a href="politicaDev.php"><li><i class="fas fa-genderless"></i><p>Política de devolución</p></li></a>
@@ -97,7 +102,7 @@
                     
                 }else{
                 ?>
-                <a href="login.php"><li class="item-option" id="user" title="Iniciar sesión o registrarte"><i class="fas fa-sign-in-alt"></i></li></a>
+                <li class="item-option" id="user" title="Iniciar sesión o registrarte"><i class="fas fa-sign-in-alt"></i></li>
                 <?php
                 }
                 ?>
@@ -105,10 +110,22 @@
                     <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i></li>
                 </a>
             </nav>
-            <div class="perfil" id="panel">
-                <div><a href="user.php">Perfil</a></div>
-                <div><a href="service/sesion/cerrarSesion.php">Cerrar Sesión</a></div>
-            </div>
+            <?php
+                if (isset($_SESSION['cod_user'])) {
+                    echo
+                    '<div class="perfil" id="panel">'.
+                        '<div><a href="user.php">Perfil</a></div>'.
+                        '<div><a href="service/sesion/cerrarSesion.php">Cerrar Sesión</a></div>'.
+                    '</div>';
+                }else{
+                    echo
+                    '<div class="perfil" id="panel">'.
+                        '<div><a href="login.php">Iniciar Sesión</a></div>'.
+                        '<div><a href="signup.php">Registrarse</a></div>'.
+                    '</div>';
+                }
+            ?>
+
             <div class="responsive menu-responsive">
                 <a href="carrito.php">
                     <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i></li>

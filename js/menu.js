@@ -48,7 +48,31 @@ catalogo_btn.addEventListener("click",()=>{
         v = false;
     }
 });
-//ABRIR Y CERRAR ELEMENTOS DESPLEGABLES
+//ABRIR Y CERRAR COMPRAS DESPLEGABLES
+const compra_btn = document.getElementById('compra-btn');
+const items_compras = document.getElementById('items-compras');
+const icon_compra = document.getElementById('i-compra');
+var c = false;
+
+
+icon_compra.classList.add("fas");
+icon_compra.classList.add("fa-chevron-right");
+
+compra_btn.addEventListener("click",()=>{
+    
+    if(c == false){
+        items_compras.style.display = "block";
+        icon_compra.classList.replace("fas", "fas");
+        icon_compra.classList.replace("fa-chevron-right", "fa-chevron-down");
+        c = true;
+    }
+    else if(c == true){
+        items_compras.style.display = "none";
+        icon_compra.classList.replace("fas", "fas");
+        icon_compra.classList.replace("fa-chevron-down", "fa-chevron-right");
+        c = false;
+    }
+});
 
 
 //DESPLEGAR INPUT

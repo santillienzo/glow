@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (isset($_SESSION['cod_user'])) {
+    $cod_admin = $_SESSION['cod_user'];
+    if ($cod_admin == 1) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +21,8 @@
 <body>
     <header>
         <div class="title-container">
-            <a href="admin.php">INICIO PANEL</a>
-            <h4>PEDIDO</h4>
+            <a href="administrarPedidos.php">INICIO PANEL</a>
+            <h4>PRODUCTOS</h4>
             <a href="pack_admin.php"><span>TABLA DE PAQUETES</span><i class="fas fa-arrow-right"></i></a>
         </div>
     </header>
@@ -24,7 +30,7 @@
     
 
     <table class="tabla">
-        <caption>PEDIDOS</caption>
+        <caption>OBJETOS</caption>
         <thead>
             <tr>
                 <th scope="col">ID PEDIDO</th>
@@ -46,3 +52,7 @@
 
 </body>
 </html>
+
+<?php
+    }
+}

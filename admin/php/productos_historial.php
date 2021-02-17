@@ -6,8 +6,9 @@ $inc = include("../service/_conexion.php");
 $sql = "SELECT * FROM pedido 
 INNER JOIN productos ON pedido.id_producto = productos.id_producto
 INNER JOIN estados_ped ON pedido.estado_ped = estados_ped.estado_ped
-WHERE pedido.estado_ped = 3";
+WHERE pedido.estado_ped = 5";
 $resultado= mysqli_query($con, $sql);
+$pag = 3;
 
 if ($resultado){
     while($row = $resultado->fetch_array()){
@@ -20,7 +21,7 @@ if ($resultado){
         
         ?>
         <tr>
-            <form action="edit/editEstado.php?id=<?php echo $codped?>&pag=1" method="POST">
+            <form action="edit/editEstado.php?id=<?php echo $codped?>&pag=<?php echo $pag?>" method="POST">
                 <th scope="row"><?php echo $codped;?></th>
                 <th scope="row"><?php echo $coduser;?></th>
                 <th scope="row"><?php echo $producto;?></th>

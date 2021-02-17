@@ -24,7 +24,7 @@
 
     <article class="article">
         <div class="formulario">
-        <form action="signup.php" method="POST">
+        <form action="signup.php" method="POST" >
 			<h3>Registro</h3>
 			<input type="text" name="nombre_usu" placeholder="Nombre" require>
 			<input type="text" name="apellido_usu" placeholder="Apellido" require>
@@ -44,6 +44,15 @@
 								break;							
 							case '3':
 								echo '<p class="error">Rellene todos los campos por favor.</p>';
+								break;							
+							case '4':
+								echo '<p class="error">Ingrese un número de teléfono válido por favor.</p>';
+								break;							
+							case '5':
+								echo '<p class="error">Ingrese una dirección de correo válida.</p>';
+								break;							
+							case '6':
+								echo '<p class="error">Ese email ya existe. Por favor pruebe con otro.</p>';
 								break;							
 							default:
 								break;

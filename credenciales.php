@@ -1,5 +1,0 @@
-<?php
-
-$access_token = "TEST-2077782747795644-012120-a9b5c3d4acce2a8b7e33d8cd1c21846e-353083888";
-
-?>

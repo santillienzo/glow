@@ -11,7 +11,7 @@ if (isset($_SESSION['cod_user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../Images/nota.ico">
     <link rel="stylesheet" href="../style/normalize.css">
-    <link rel="stylesheet" href="style/pedido.css">
+    <link rel="stylesheet" href="style/historial_2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -22,34 +22,21 @@ if (isset($_SESSION['cod_user'])) {
     <header>
         <div class="title-container">
             <a href="administrarPedidos.php">INICIO PANEL</a>
-            <h4>TABLA DE PAQUETES GLOW</h4>
-            <a href="pedidos.php"><span>PRODUCTOS</span><i class="fas fa-arrow-right"></i></a>
+            <h4>PRODUCTOS</h4>
+            <a href="historial.php"><span>PAQUETES HISTORIAL</span><i class="fas fa-arrow-right"></i></a>
         </div>
     </header>
     
     
 
     <table class="tabla">
-        <caption>PAQUETES</caption>
+        <caption>OBJETOS</caption>
         <thead>
             <tr>
-                <th scope="col">ID COMPRA</th>
+                <th scope="col">ID PEDIDO</th>
                 <th scope="col">USUARIO N°</th>
-                <th scope="col">NOMBRE</th>
-                <th scope="col">APELLIDO</th>
-                <th scope="col">TELÉFONO</th>
-                <th scope="col">EMAIL</th>
-                <th scope="col">ENTREGA</th>
-                <th scope="col">CANTIDAD OBJETOS</th>
-                <th scope="col">PRECIO</th>
-                <th scope="col">FECHA</th>
-                <th scope="col">PROVINCIA</th>
-                <th scope="col">CIUDAD</th>
-                <th scope="col">BARRIO</th>
-                <th scope="col">CALLE/MANZANA</th>
-                <th scope="col">NUMERO</th>
-                <th scope="col">DEPARTAMENTO</th>
-                <th scope="col">CÓDIGO POSTAL</th>
+                <th scope="col">PRODUCTO</th>
+                <th scope="col">CANTIDAD</th>
                 <th scope="col">ESTADO</th>
                 <th scope="col">CONDICIÓN</th>
                 <th scope="col"></th>
@@ -57,7 +44,7 @@ if (isset($_SESSION['cod_user'])) {
         </thead>
         <tbody>
             <?php 
-            require 'php/pack_usu.php';
+            require 'php/productos_historial.php';
             ?>
         </tbody>
     </table>
@@ -65,7 +52,6 @@ if (isset($_SESSION['cod_user'])) {
 
 </body>
 </html>
-
 <?php
     }
 }

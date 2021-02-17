@@ -18,15 +18,24 @@ function compra($entrega,$envio){
     $postal = ' ';
     
     if ($entrega = 1) {
-        $provincia= $_POST['prov_envio'];
-        $ciudad= $_POST['ciudad_envio'];
-        $barrio= $_POST['barrio_envio'];
-        $calle= $_POST['calle_envio'];
-        $numero= $_POST['numero_envio'];
-        $departamento= $_POST['depart_envio'];
-        $postal= $_POST['postal_envio'];
-        
+        $provincia= ucwords(strtolower(trim($_POST['prov_envio'])));
+        $ciudad= ucwords(strtolower(trim($_POST['ciudad_envio'])));
+        $barrio= ucwords(strtolower(trim($_POST['barrio_envio'])));
+        $calle= trim($_POST['calle_envio']);
+        $numero= trim($_POST['numero_envio']);
+        $departamento= trim($_POST['depart_envio']);
+        $postal= trim($_POST['postal_envio']);
     }
+
+    //REALIZAR SANEAMIENTO
+    $provincia = filter_var($provincia,FILTER_SANITIZE_SPECIAL_CHARS);
+    $ciudad = filter_var($ciudad,FILTER_SANITIZE_SPECIAL_CHARS);
+    $barrio = filter_var($barrio,FILTER_SANITIZE_SPECIAL_CHARS);
+    $calle = filter_var($calle,FILTER_SANITIZE_SPECIAL_CHARS);
+    $numero = filter_var($numero,FILTER_SANITIZE_SPECIAL_CHARS);
+    $departamento = filter_var($departamento,FILTER_SANITIZE_SPECIAL_CHARS);
+    $postal = filter_var($postal,FILTER_SANITIZE_SPECIAL_CHARS);
+
 
     include('../_conexion.php');
     $response=new stdClass();

@@ -17,7 +17,7 @@ if ($resultado) {
     
     if ($filas > 0) {
         $pass_usu = $_POST['pas_usu'];
-        
+        $pass_usu = hash('sha512',$pass_usu);
         if ($pass_usu == $row['pas_usu']) {
             session_start();
             $_SESSION['cod_user'] = $row['cod_user'];

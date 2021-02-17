@@ -6,7 +6,7 @@ $inc = include("../service/_conexion.php");
 $sql = "SELECT * FROM compras
 INNER JOIN entregas ON entregas.id_entrega = compras.id_entrega
 INNER JOIN estado_compras ON estado_compras.estado_compra = compras.estado_compra
-WHERE compras.estado_compra  = 1";
+WHERE compras.estado_compra  = 3";
 $resultado= mysqli_query($con, $sql);
 
 if ($resultado){
@@ -32,7 +32,7 @@ if ($resultado){
         $descri_compras = $row['descri_compra'];
         ?>
         <tr>
-            <form action="edit/editEstado_compra.php?id=<?php echo $compra;?>&pag=1" method="POST">
+            <form action="edit/editEstado_compra.php?id=<?php echo $compra;?>&pag=3" method="POST">
                 <th scope="row"><?php echo $compra;?></th>
                 <td><?php echo $cod_user;?></td>
                 <td><?php echo $nom_usu;?></td>

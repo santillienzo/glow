@@ -149,6 +149,30 @@ li{
 .item-catalogo p{
     margin-left: 15px;
 }
+/*COMPRAS DESPLEGABLES*/
+#compra-btn:hover{
+    cursor: pointer;
+}
+
+#compra-btn p::selection{
+    color: black;
+}
+
+#items-compras{
+    display: none;
+    width: 55%;
+    margin: auto;
+}
+
+.item-compra{
+    padding: 5px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.item-compra p{
+    margin-left: 15px;
+}
 
 
 /***********MENÚ DESPLEGABLE*/
@@ -469,6 +493,7 @@ li{
     .item-catalogo p{
         margin-left: 15px;
     }
+    
     
     
     /***********MENÚ DESPLEGABLE*/
