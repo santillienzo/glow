@@ -9,7 +9,9 @@
                 <div class="items-nav buscador-container">
                         <div class="buscador">
                             <input type="text" id="input-search-r" placeholder="Busca aquí...">
-                            <li class="item-option" id="buscar-r" title="Buscar"><i class="fas fa-search"></i></li>
+                            <ul>
+                                <li class="item-option" id="buscar-r" title="Buscar"><i class="fas fa-search"></i></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -128,7 +130,7 @@
 
             <div class="responsive menu-responsive">
                 <a href="carrito.php">
-                    <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i></li>
+                    <li class="item-option" id="cart-responsive" title="Carrito"><i class="fas fa-shopping-cart"></i></li>
                 </a>
             </div>
         </div>

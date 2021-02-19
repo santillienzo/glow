@@ -23,14 +23,15 @@ session_start();
 <body>
     <?php require 'partials/nav.php' ?>
 
-
-    <section class="masVendido-container">
-        <div class="masVendidoTítulo"><h2>Resultados para: "<?php echo $_GET['product'];?>"</h2></div>
-        <div class="objetosMasVendidos-container" id="space-list">
-                
-                
-        </div>
-    </section>
+    <article>
+        <section class="masVendido-container">
+            <div class="masVendidoTítulo"><h2>Resultados para: "<?php echo $_GET['product'];?>"</h2></div>
+            <div class="objetosMasVendidos-container" id="space-list">
+                    
+                    
+            </div>
+        </section>
+    </article>
 
     <?php require 'partials/foot.php' ?>
 
