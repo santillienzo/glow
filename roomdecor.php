@@ -26,8 +26,9 @@
     <section class="masVendido-container">
         <div class="masVendidoTítulo"><h2>ROOM DECOR</h2></div>
         <div class="objetosMasVendidos-container" id="space-list">
-            
-            
+        <?php
+            require 'service/producto/get_all_room.php';
+        ?>
         </div>
     </section>
 
@@ -35,7 +36,6 @@
 
 
     <script type="text/javascript" src="js/menu.js"></script>
-    <script src="js/roomdecor.js"></script>
 
 </body>
 </html>

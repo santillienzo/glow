@@ -53,7 +53,7 @@ if ($resultado){
                 <td><input type="text" value="<?php echo $estado;?>" name="estado"></td>
                 <td><?php echo $descri_compras;?></td>
                 <?php
-                echo '<td><a href="eliminar/eliminar_pedido.php?id='.$compra.'"><i class="fas fa-times"></i></a></td>';
+                echo '<td><a href="eliminar/eliminar_compra.php?id='.$compra.'&pag=2"><i class="fas fa-times"></i></a></td>';
                 ?>
             </form>
         </tr>

@@ -44,14 +44,6 @@
                     <h4>¿Cómo comprar?</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi mollitia voluptates repellat nesciunt nulla, tempore natus eos? Maiores nostrum ad tempore quibusdam enim quod esse cupiditate minus magni modi? At?</p>
                 </div>
-                <div class="q3_container q_container">
-                    <h4>¿No se ve tu dirección o no se actualiza?</h4>
-                    <p>En el caso de que esto suceda simplemente debes cerrar sesión y volver a abrirla.</p>
-                </div>
-                <div class="q3_container q_container">
-                    <h4>¿Cómo comprar?</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi mollitia voluptates repellat nesciunt nulla, tempore natus eos? Maiores nostrum ad tempore quibusdam enim quod esse cupiditate minus magni modi? At?</p>
-                </div>
             </div>
             
         </section>

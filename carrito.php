@@ -1,10 +1,5 @@
 <?php
     session_start();
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,8 +27,9 @@
     <?php
     if (isset($_SESSION['cod_user'])) {
         echo
-    '<article id="article">'.
-        
+    '<article id="article">';
+        require 'service/pedido/get_all.php';
+    echo
     '</article>';
         
     }else{
@@ -50,75 +46,9 @@
 
 
     <script type="text/javascript">
-        $(document).ready(function(){
-			$.ajax({
-				url:'service/pedido/get_all.php',
-				type:'POST',
-				data:{},
-				success:function(data){
-                    console.log(data);
-                    let article =''; //CONTROLAMOS QUE HAYAN ELEMENTOS A MOSTRAR O SI DAMOS UN AVISO.
-                    let producto=''; //CON ESTRE MOSTRAMOS LOS PRODUCTOS
-                    let monto=0; //PRECIO
-                    if(data.datos.length > 0){
-                        article =
-                            '<div class="relleno-container">'+
-                                '<div class="relleno" id="space-list">'+
-
-                                '</div>'+
-                                    '<div class="datos-container">'+
-                                        '<p><span>Subtotal:</span><span id="montoTotal"></span></p>'+
-                                    '</div>'+
-                                '<div class="btn-comprar-container">'+
-                                        '<button class="btn-comprar" onclick="elegirEntrega()">Continuar comprar</button>'+
-                                '</div>'+
-                            '</div>';
-                        for (var i = 0; i < data.datos.length; i++) {
-                            producto+=
-                            '<div class="item-pedido">'+
-                                '<div class="pedido-img">'+
-                                    '<img src="Images/productos/'+ data.datos[i].rut_imagen+'">'+
-                                '</div>'+
-                                '<div class="pedido-detalle">'+
-                                    '<div class="box-detalle">' +
-                                        '<h3>'+data.datos[i].nombre_producto+'</h3>'+
-                                        '<p><b>Precio:</b>'+formato_precio(data.datos[i].pre_pro)+'<p>'+
-                                        '<p><b>Fecha:</b>'+data.datos[i].fecha_pedido+'</p>'+
-                                        '<p><b>Cantidad:</b>'+data.datos[i].cantidad+'</p>'+
-                                        '<a class="eliminar" href="service/pedido/eliminar.php?id='+data.datos[i].codped+'"><span>Eliminar</span></a>'+
-                                    '</div>' +
-                                '</div>'+
-                            '</div>';
-                            if(data.datos[i].estado=='1'){
-                                monto+=parseFloat(data.datos[i].pre_pro * data.datos[i].cantidad);
-                            }
-                        }
-					}else{
-                        article =
-                        '<div class="aviso-container">'+
-                            '<div class="aviso">UPS! parece que no tienes nada en el carrito. Mirá algún producto y agregalo!</div>'+
-                        '</div>';
-                    }
-					document.getElementById("article").innerHTML=article;
-					document.getElementById("space-list").innerHTML=producto;
-					document.getElementById("montoTotal").innerHTML=formato_precio(monto);
-				},
-				error:function(err){
-					console.error(err);
-				}
-            });
-        });
-
-        
-
-
         function elegirEntrega(){
             window.location.href="service/pedido/confirm.php";
         }
-
-        function formato_precio(valor){
-    return 'ARS $' + valor;
-}
     </script>
 
 <script type="text/javascript" src="js/menu.js"></script>

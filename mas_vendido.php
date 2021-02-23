@@ -25,7 +25,9 @@
     <section class="masVendido-container">
         <div class="masVendidoTítulo"><h2>MÁS VENDIDO</h2></div>
         <div class="objetosMasVendidos-container" id="space-list">
-            
+        <?php
+            require 'service/producto/get_all_productsMV.php';
+        ?>
             
         </div>
     </section>
@@ -34,6 +36,5 @@
 
 
     <script src="js/menu.js"></script>
-    <script src="js/MV.js"></script>
 </body>
 </html>

@@ -68,6 +68,10 @@ article{
     margin-bottom: 10px;
 }
 
+.info_pago p{
+    margin-bottom: 15px;
+}
+
 .btn-container{
     margin: 25px;
 }
@@ -104,4 +108,126 @@ article{
 .preciop p{
     font-size: 20px;
     color: red;
+}
+
+.aviso{
+    text-align: center;
+}
+
+
+@media screen and (max-width:700px){
+    article{
+        min-height: 85vh;
+        margin-top: 15vh;
+        padding-bottom: 15px;
+    }
+    
+    .title{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        padding: 75px;
+        font-size: 35px;
+    }
+    
+    .datos_container{
+        max-height: 85vh;
+        overflow: auto;
+        width: 70%;
+        margin: auto;
+        box-shadow: 0 0 1px 1px #000;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    
+    .title-dato{
+        text-align: center;
+        padding: 15px;
+        padding-top: 0;
+    }
+    
+    .datos_compra_container{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 15px;
+        text-align: center;
+
+    }
+    
+    .datos_compra{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .datos_producto_container{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+
+    }
+    
+    .datos_producto{
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+        border-bottom: 1px solid #000;
+    }
+    
+    
+    .info_pago{
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        padding: 15px;
+        background-color: rgb(36, 60, 105);
+        border-radius: 15px;
+    }
+    
+    .info_pago div{
+        color: #fff;
+    }
+    
+    .info_pago div:nth-child(1){
+        margin-bottom: 10px;
+    }
+    
+    .btn-container{
+        margin: 25px;
+    }
+    
+    .btn-container button{
+        background-color: rgb(241, 68, 68);
+        display: block;
+        width: fit-content;
+        margin: auto;
+        padding: 15px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 0 1px 1px #555;
+        color: #fff;
+        transition: .2s ease-in;
+    }
+    
+    .btn-container button:hover{
+        background-color: #fff;
+        color: rgb(241, 68, 68);
+        box-shadow: 0 0 1px 1px rgb(241, 68, 68);
+        transition: .2s ease-in;
+    }
+    
+    .btn-container button:focus{
+        outline: none;
+    }
+    
+    .precio p{
+        color: rgb(107, 48, 175);
+        font-size: 20px;
+    }
+    
+    .preciop p{
+        font-size: 20px;
+        color: red;
+    }
 }

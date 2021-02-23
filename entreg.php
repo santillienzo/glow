@@ -26,40 +26,43 @@
 
         <div class="opciones-container">
             <div class="title-container">
-                <h3>¿Donde deseas retirar el pedido?</h3>
+                <h3>¿Dónde deseas retirar el pedido?</h3>
+                <p>Seleccionar una opción</p>
             </div>
             <form action="service/pedido/confirm_compra.php" method="POST">
-                <div class="option">
-                    <input type="radio" name="optio-radio" value="domicilio" id="option1">
-                    <label for="option1">
-                        <div class="text-container">
-                            <h3>Domicilio</h3>
-                            <p>El envío a domicilio tiene un valor de ARS$80 a cualquier parte de San martín-Mendoza.</p>
-                        </div>
-                    </label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="optio-radio" value="local" id="option2">
-                    <label for="option2"><div class="text-container">
-                            <h3>Por local</h3>
-                            <a href="https://www.google.com/search?q=-33.073006299995%2C+-68.49099486276725&oq=-33.073006299995%2C+-68.49099486276725&aqs=chrome..69i57.1138j0j4&sourceid=chrome&ie=UTF-8" target="_BLANK" title="Ver las coordenadas del local.">Mendoza| San Martín| Barrio San Pedro| Manzana 20| Casa 27</a>
-                        </div>
-                    </label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="optio-radio" value="punto_comun" id="option3">
-                    <label for="option3">
-                        <div class="text-container">
-                            <h3>Punto en común</h3>
-                            <p>Se te enviará un mensaje por WhatsApp (o email) para coordinar un punto en común. Tiene un cargo de ARS $50. <span>Solo válido para San Martín-Mendoza</span> </p>
-                        </div>
-                    </label>
+                <div class="option-cont">
+                    <div class="option">
+                        <input type="radio" name="optio-radio" value="domicilio" id="option1">
+                        <label for="option1">
+                            <div class="text-container">
+                                <h3>Domicilio</h3>
+                                <p>El envío a domicilio tiene un valor de ARS$80 a cualquier parte de San martín-Mendoza.</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="optio-radio" value="local" id="option2">
+                        <label for="option2"><div class="text-container">
+                                <h3>Por local</h3>
+                                <a href="https://www.google.com/search?q=-33.073006299995%2C+-68.49099486276725&oq=-33.073006299995%2C+-68.49099486276725&aqs=chrome..69i57.1138j0j4&sourceid=chrome&ie=UTF-8" target="_BLANK" title="Ver las coordenadas del local.">Mendoza| San Martín| Barrio San Pedro| Manzana 11| Casa 6</a>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="optio-radio" value="punto_comun" id="option3">
+                        <label for="option3">
+                            <div class="text-container">
+                                <h3>Punto en común</h3>
+                                <p>Se te enviará un mensaje por WhatsApp (o email) para coordinar un punto en común. Tiene un valor de ARS $50. <span>Solo válido para San Martín-Mendoza</span> </p>
+                            </div>
+                        </label>
+                    </div>
                 </div>
                 <div class="title-container">
-                    <h3>¿Donde deseas retirar el pedido?</h3>
-                    <p>(En caso de ser envio a domicilio)</p>
+                    <h3>¿A qué dirección enviar?</h3>
                 </div>
                 <div class="inputs">
+                    <p>*Solo rellenar en caso de seleccionar envío a domicilio. Si elegiste cualquier otra opción apretá en 'continuar compra'</p>
                     <input type="text" name="prov_envio" placeholder="Provincia">
                     <input type="text" name="ciudad_envio" placeholder="Ciudad" >
                     <input type="text" name="barrio_envio" placeholder="Barrio (Opcional)">
@@ -70,10 +73,11 @@
                 </div>
                 <div class="entrega_option">
                     <div class="entrega_option-container">
+                        <p>Si <span>NO</span> eres de San Martín - Junín o Rivadavia escoger:</p>
                         <input type="radio" name="entrega" id="entreg_casa" value="casa">
-                        <label for="entreg_casa">Entrega a domicilio</label><br>
+                        <label for="entreg_casa">Entrega en: Tu casa</label><br>
                         <input type="radio" name="entrega" id="entreg_sucu" value="sucursal">
-                        <label for="entreg_sucu">Entrega a sucursal más cercana</label>
+                        <label for="entreg_sucu">Entrega en: Sucursal más cercana</label>
                     </div>
                 </div>
                 <div class="btn-comprar-container">

@@ -25,79 +25,10 @@
 <body>
     <?php require 'partials/nav.php' ?>
     <article id="article">
-        
+        <?php require 'service/pedido/get_por_pagar.php' ?>
     </article>
 
     <?php require 'partials/foot.php' ?>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-			$.ajax({
-				url:'service/pedido/get_por_pagar.php',
-				type:'POST',
-				data:{},
-				success:function(data){
-					console.log(data);
-                    let html='';
-                    let monto=0;
-                    let article = '';
-                    if(data.datos.length > 0){
-                        article = 
-                        '<div class="relleno-container">'+
-                            '<div class="relleno" id="space-list">'+
-                            
-                            '</div>'+
-                            '<div class="datos-container pedido">'+
-                                '<p><span>Total:</span><span id="montoTotal"></span></p>'+
-                            '</div>'+
-                            '<div class="btn-comprar-container">'+
-                                '<div class="cancelar" title="Cancelar compra" onclick="cancelar_compra()"><i class="fas fa-times"></i></div>'+
-                                
-                                '<div class="btn-comprar-container">'+
-                                    '<button class="btn-comprar" onclick="confirm_compra()">Comprar</button>'+
-                            '</div>'+
-                        '</div>';
-                        
-                        for (var i = 0; i < data.datos.length; i++) {
-                            html+=
-                            '<div class="item-pedido">'+
-                                '<div class="pedido-img">'+
-                                    '<img src="Images/productos/'+ data.datos[i].rut_imagen+'">'+
-                                '</div>'+
-                                '<div class="pedido-detalle">'+
-                                    '<div class="box-detalle">' +
-                                        '<h3>'+data.datos[i].nombre_producto+'</h3>'+
-                                        '<p><b>Precio:</b>'+formato_precio(data.datos[i].pre_pro)+'<p>'+
-                                        '<p><b>Fecha:</b>'+data.datos[i].fecha_pedido+'</p>'+
-                                        '<p><b>Cantidad:</b>'+data.datos[i].cantidad+'</p>'+
-                                        '<p><b>Estado:</b>'+data.datos[i].estadotext+'</p>'+
-                                    '</div>' +
-                                '</div>'+
-                            '</div>';
-                            if(data.datos[i].estado=='2'){
-                                monto+=parseFloat(data.datos[i].pre_pro * data.datos[i].cantidad);
-                            }
-                        }
-                    }else{
-                        article = 
-                        '<div class="aviso-container">'+
-                            '<div class="aviso">Parece que no tienes pedidos pendientes. <br> :) <br> Volver a <a href="/">www.glow.com.ar</a></div>'+
-                        '</div>';
-                    }
-					document.getElementById("article").innerHTML=article;
-					document.getElementById("space-list").innerHTML=html;
-					document.getElementById("montoTotal").innerHTML=formato_precio(monto);
-				},
-				error:function(err){
-					console.error(err);
-				}
-            });
-        });
-
-        function formato_precio(valor){
-            return ' ARS $' + valor;
-        }
-    </script>
 
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript">

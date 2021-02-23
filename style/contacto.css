@@ -97,7 +97,7 @@ article{
     min-width: 50%;
 }
 
-#campo_nombre, #campo_email, #campo_telefono{
+#campo_nombre, #campo_email, #campo_telefono, #campo_asunto{
     padding: 5px;
     background-color: transparent;
     border: none;
@@ -107,7 +107,8 @@ article{
 
 #campo_nombre:focus, 
 #campo_email:focus, 
-#campo_telefono:focus{
+#campo_telefono:focus,
+#campo_asunto:focus{
     outline: none;
     border-bottom: 1px solid #B45434;
 }
@@ -122,25 +123,62 @@ article{
 }
 
 #btn_enviar{
-    border:1px solid #000;
+    border:none;
+    box-shadow: 0 0 1px 1px #000;
     border-radius: 45px;
+    background-color: #333;
+    color: #fff;
+    display: inline-block;
+    transition: background-color .5s ease-in;
+    cursor: pointer;
 }
 
 #btn_enviar:hover{
-    background-color: #ddd;
+    background-color: #666;
     outline: none;
     border: none;
-    border:1px solid #000;
-    transition: background-color .1s ease-in;
+    box-shadow: 0 0 1px 1px #000;
+    transition: background-color .5s ease-in;
 }
 
 #btn_enviar:focus{
     outline: none;
 }
 
+.mensaje-exito{
+    position: fixed;
+    width: 100vw;
+    height: 85vh;
+    background-color: #e6dfdf5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.mensaje-container{
+    width: 25%;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(47, 155, 47);
+}
 
+.mensaje-container p{
+    margin-top: 15px;
+    color: #fff;
+}
 
+.mensaje-container i{
+    color: #fff;
+}
+
+.error{
+    width: 100%;
+    text-align: center;
+    color: rgb(224, 52, 52);
+    margin-top: 15px;
+}
 
 
 
@@ -297,5 +335,33 @@ article{
 
 #btn_enviar:focus{
     outline: none;
+}
+
+.mensaje-exito{
+    position: fixed;
+    width: 100vw;
+    height: 85vh;
+    background-color: #e6dfdf5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje-container{
+    width: 85%;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(47, 155, 47);
+}
+
+.mensaje-container p{
+    margin-top: 15px;
+    color: #fff;
+}
+
+.mensaje-container i{
+    color: #fff;
 }
 }

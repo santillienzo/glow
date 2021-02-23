@@ -17,7 +17,7 @@ function compra($entrega,$envio){
     $departamento = ' ';
     $postal = ' ';
     
-    if ($entrega = 1) {
+    if ($entrega == 1) {
         $provincia= ucwords(strtolower(trim($_POST['prov_envio'])));
         $ciudad= ucwords(strtolower(trim($_POST['ciudad_envio'])));
         $barrio= ucwords(strtolower(trim($_POST['barrio_envio'])));

@@ -15,35 +15,40 @@ if (isset($_SESSION['cod_user'])) {
     <title>ADMINISTRACION</title>
 </head>
 <body>
-    <div class="container">
-        <div class="card" onclick="uno()">
-            <div class="face face1">
-                <div class="content">
-                    <h2>Esperando pago</h2> <p>En esta pestaña verás todos los pedidos que aún no tienen un comprobante de pago correspondiente. <br> Una vez lo obtengas, tienes que actualizar el paquete y sus productos a fases 2(paquete) y 4(productos)</p>
+    <nav>
+    <p><a href="admin.php">Inicio</a></p>
+    </nav>
+    <div class="container-container">
+        <div class="container">
+            <div class="card" onclick="uno()">
+                <div class="face face1">
+                    <div class="content">
+                        <h2>Esperando pago</h2> <p>En esta pestaña verás todos los pedidos que aún no tienen un comprobante de pago correspondiente. <br> Una vez lo obtengas, tienes que actualizar el paquete y sus productos a fases 2(paquete) y 4(productos)</p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Comprado <br> Esperando pago</h2>
                 </div>
             </div>
-            <div class="face face2">
-                <h2>Comprado <br> Esperando pago</h2>
-            </div>
-        </div>
-        <div class="card" onclick="dos()">
-            <div class="face face1"> 
-                <div class="content">
-                    <h2>Sin entregar</h2> <p>Estos son los paquetes que aún no entregas, una vez lo hagas deberas actualizar los pedidos a fase 3(paquetes) y fase 5(productos) para enviarlos al historial.</p>
+            <div class="card" onclick="dos()">
+                <div class="face face1"> 
+                    <div class="content">
+                        <h2>Sin entregar</h2> <p>Estos son los paquetes que aún no entregas, una vez lo hagas deberas actualizar los pedidos a fase 3(paquetes) y fase 5(productos) para enviarlos al historial.</p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Comprado <br> Pagado <br> Sin entregar</h2>
                 </div>
             </div>
-            <div class="face face2">
-                <h2>Comprado <br> Pagado <br> Sin entregar</h2>
-            </div>
-        </div>
-        <div class="card" onclick="tres()">
-            <div class="face face1">
-                <div class="content">
-                    <h2>Historial</h2> <p>Aquí verás todos los productos que ya han sido entregados a tus clientes. Aquí seguramente no debas mover nada, salvo que te hayas equivocado en algo.</p>
+            <div class="card" onclick="tres()">
+                <div class="face face1">
+                    <div class="content">
+                        <h2>Historial</h2> <p>Aquí verás todos los productos que ya han sido entregados a tus clientes. Aquí seguramente no debas mover nada, salvo que te hayas equivocado en algo.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="face face2">
-                <h2>Historial</h2>
+                <div class="face face2">
+                    <h2>Historial</h2>
+                </div>
             </div>
         </div>
     </div>

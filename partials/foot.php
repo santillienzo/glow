@@ -13,7 +13,7 @@
                     <li><i class="fas fa-id-card" title="Contacto"></i></li>
                     <li><i class="fab fa-whatsapp"></i><p>+54 9 263 475-9547</p></li>
                     <li><i class="fas fa-phone"></i><p>4425129</p></li>
-                    <li><i class="far fa-envelope"></i><p>emaildeglow@gmail.com</p></li>
+                    <li><i class="far fa-envelope"></i><p>glowstorevm@gmail.com</p></li>
                     <li><i class="fas fa-map-marker-alt"></i><p>San Martín - Mendoza | Barrio San Pedro M11 C6</p></li>
                 </div>
             </div>

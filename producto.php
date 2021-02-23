@@ -24,26 +24,16 @@
 
     <article class="article">
         <section class="objeto">
-            <div class="objeto-imagen">
-                <img id="id_imagen" src="" alt="">
-            </div>
-            <div class="objeto-info">
-                <h2 id="id_nombre"></h2>
-                <h3 id="id_descri"></h3>
-                <h4 id="id_precio"></h4>
-                <div class="cant-container">
-                    <span class="next" onclick="nextNum()"></span>
-                    <span class="prev" onclick="prevNum()"></span>
-                    <div id="box">
-                    </div>
-                </div>
-                <button class="btn_comprar" onclick="iniciar_compra()">Agregar al carrito</button>
-            </div>
+        <?php
+                require 'service/producto/get_pro.php';
+            ?>
         </section>
         <section class="moreElements">
         <div class="masVendidoTítulo"><h2>MÁS PRODUCTOS</h2></div>
             <div class="objetosMasVendidos-container" id="space-list">
-
+            <?php
+                require 'service/producto/get_all_products.php';
+            ?>
             </div>
         </section>
     </article>
@@ -94,7 +84,7 @@
             var cantidad_text = document.querySelector('.cantidad').textContent;
             var cantidad = parseInt(cantidad_text);
             if (cantidad == 0) {
-                
+        
             }else{
                 $.ajax({
                 url:'service/compras/validar_inicio_compra.php',
@@ -107,7 +97,6 @@
                     console.log(data);
                     if(data.state){
                         alert(data.detail);
-                        window.location.href="carrito.php";
                     }else{
                         alert(data.detail);
                         if(data.open_login){

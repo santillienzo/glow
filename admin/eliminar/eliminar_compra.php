@@ -3,7 +3,7 @@ include("../../service/_conexion.php");
 $id = $_GET['id'];
 $pag = $_GET['pag'];
 
-$eliminar = "DELETE FROM pedido WHERE codped='$id'";
+$eliminar = "DELETE FROM compras WHERE id_compra='$id'";
 
 $result=mysqli_query($con,$eliminar);
 

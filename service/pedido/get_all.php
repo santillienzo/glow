@@ -1,13 +1,10 @@
 <?php
-include('../_conexion.php');
+include('service/_conexion.php');
 $response=new stdClass();
-session_start();
 
 
 
 //$datos=array();
-$datos=[];
-$i=0;
 $usuario = $_SESSION['cod_user'];
 $sql="select *,ped.estado_ped estadoped from pedido ped
 inner join productos pro
@@ -15,25 +12,56 @@ on ped.id_producto=pro.id_producto
 inner join estados_ped on ped.estado_ped = estados_ped.estado_ped
 where ped.estado_ped=1 and cod_user = $usuario";
 $result=mysqli_query($con,$sql);
-while($row=mysqli_fetch_array($result)){
-	$obj=new stdClass();
-	$obj->codped=$row['codped'];
-	$obj->coduser=$row['cod_user'];
-	$obj->id_producto=$row['id_producto'];
-	$obj->nombre_producto=$row['nombre_producto'];
-	$obj->des_producto=$row['des_producto'];
-	$obj->cantidad=$row['cantidad'];
-	$obj->fecha_pedido=$row['fecha_pedido'];
-	$obj->pre_pro=$row['pre_pro'];
-	$obj->estado=$row['estadoped'];
-	$obj->rut_imagen=$row['rut_imagen'];
-	$datos[$i]=$obj;
-	$i++;
-}
-$response->datos=$datos;
+$filas= mysqli_num_rows($result);
+$monto = 0;
 
-mysqli_close($con);
-header('Content-Type: application/json');
-echo json_encode($response);
+if ($filas > 0) {
+?>
+	<div class="relleno-container">
+		<div class="relleno" id="space-list">
+		<?php
+			while($row=mysqli_fetch_array($result)){
+				$codped=$row['codped'];
+				$id_producto=$row['id_producto'];
+				$nombre_producto=$row['nombre_producto'];
+				$cantidad=$row['cantidad'];
+				$pre_pro=$row['pre_pro'];
+				$estado=$row['estadoped'];
+				$rut_imagen=$row['rut_imagen'];
+				?>
+				<div class="item-pedido">
+					<div class="pedido-img">
+						<img src="Images/productos/<?php echo $rut_imagen?>">
+					</div>
+					<div class="pedido-detalle">
+						<div class="box-detalle">
+							<h3><?php echo $nombre_producto?></h3>
+							<p><b>Precio:</b>ARS $ <?php echo $pre_pro?><p>
+							<p><b>Cantidad:</b><?php echo $cantidad?></p>
+							<a class="eliminar" href="service/pedido/eliminar.php?id=<?php echo $codped?>"><span>Eliminar</span></a>
+						</div>
+					</div>
+				</div>
+		<?php
+				$monto += $pre_pro;
+			}
+		?>
+		</div>
+		<div class="datos-container">
+			<p><span>Subtotal:</span><span id="montoTotal">ARS $ <?php echo $monto?></span></p>
+		</div>
+		<div class="btn-comprar-container">
+			<button class="btn-comprar" onclick="elegirEntrega()">Continuar comprar</button>
+		</div>
+    </div>
+	<?php
+}else{
+	?>
+	<div class="aviso-container">
+        <div class="aviso">UPS! parece que no tienes nada en el carrito. Mirá algún producto y agregalo!</div>
+    </div>
+	<?php
+}
+
 
 ?>

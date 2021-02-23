@@ -18,6 +18,7 @@ article{
     text-align: center;
     font-size: 25px;
     padding: 15px;
+    
 }
 
 .opciones-container form{
@@ -27,8 +28,12 @@ article{
 }
 
 /*************************************/
+.option-cont{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 .option{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .option input{
@@ -97,6 +102,7 @@ article{
     width: 90%;
     margin: auto;
     text-align: center;
+    margin-bottom: 35px;
 }
 
 .inputs input{
@@ -171,6 +177,9 @@ article{
 
 
 
+p span{
+    color: rgb(226, 46, 46);
+}
 
 
 
@@ -201,6 +210,24 @@ article{
     }
 
 
+    .option label{
+        display: inline-block;
+        width: 90%;
+        margin: auto;
+        position: relative;
+        color: #333;
+        font-size: 18px;
+        border-left: 5px solid #333;
+        box-shadow: 0 0 8px 1px #333;
+        border-radius: 5px;
+        padding: 10px 5px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        transition: background .25s ease;
+    }
+
+
     .option input:checked + label::before{
         height: 10px;
         width: 10px;
@@ -212,6 +239,7 @@ article{
         width: 90%;
         margin: auto;
         text-align: center;
+        margin-bottom: 15px;
     }
     
     .inputs input{
@@ -235,6 +263,7 @@ article{
     .entrega_option{
         width: 90%;
         margin: auto;
+        margin-top: 25px;
     }
     
     .entrega_option-container{

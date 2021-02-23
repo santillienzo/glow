@@ -21,37 +21,51 @@
 </head>
 <body>
 <?php require 'partials/nav.php' ?>
+    <?php
 
-    <article>
-        <div class="title"><h4>Detalle de tu compra</h4></div>
-        <div class="datos_container" id="c">
-            <div class="datos_compra_container">
-                <h4 class="title-dato">Compra</h4>
-                <div></div>
-                <div class="datos_compra" id="compra">
-                    
-                </div>
-            </div>
-            <div class="datos_producto_container">
-                <h4 class="title-dato">Producto</h4>
-                <div  id="productos">
-                    
+    if (isset($_SESSION['cod_user'])) {
+        ?>
+        <article>
+            <div class="title"><h4>Detalle de tu compra</h4></div>
+            <div class="datos_container" id="c">
+                <div class="datos_compra_container">
+                    <h4 class="title-dato">Compra</h4>
+                    <div></div>
+                    <div class="datos_compra" id="compra">
                         
-                    
+                    </div>
+                </div>
+                <div class="datos_producto_container">
+                    <h4 class="title-dato">Producto</h4>
+                    <div  id="productos">
+                        
+                            
+                        
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="info_pago">
-            <div><h4>¿Como pagar?</h4></div>
-            <div><p>1- Realizar una transferencia al siguiente cbu: <span>0000003100029034499536</span></p></div>
-            <div><p>2- En la descripción de la transferencia ponga el id de la compra, su nombre y su apellido.</span></p></div>
-            <div><p>3- Enviar el comprobante de pago a "glowStore@glow.com". (OBLIGATORIO)</span></p></div>
-            <div><p>4- Una vez enviado tendrás que esperar la confirmación. En el caso de haber elegido retirar en un punto en común se te enviará un mensaje por WhatsApp al número de tu cuenta.</span></p></div>
-        </div>
-        <div class="btn-container">
-            <button onclick="cancelarpago()">Cancelar compra</button>
-        </div>
-    </article>
+            <div class="info_pago">
+                <div><h4>¿Como pagar?</h4></div>
+                <div><p>1- Realizar una transferencia al siguiente cbu: <span>0000003100095426308425</span></p></div>
+                <div><p>2- En la descripción de la transferencia ponga el id de la compra (ver detalle de la compra), tu nombre y tu apellido.</span></p></div>
+                <div><p>3- Enviar el comprobante de pago a "glowStore@glowstore.com.ar". (OBLIGATORIO)</span></p></div>
+                <div><p>4- Una vez hecha la transferencia tendrás que esperar la confirmación del pago. Se te enviará un recibo por mail y en el caso de haber elegido retirar en un punto en común se te enviará un mensaje por WhatsApp al número de tu cuenta.</span></p></div>
+            </div>
+            <div class="btn-container">
+                <button onclick="cancelarpago()">Cancelar compra</button>
+            </div>
+        </article>
+        <?php
+    }else{
+        ?>
+
+        <article>
+            
+        </article>
+        <?php
+    }
+    ?>
+    
 
 
 
@@ -98,7 +112,13 @@
                         }
 
                         
-					}
+					}else{
+                        compra =
+                        '<div class="aviso">Aquí no hay nada</div>'
+                        producto +=
+                        '<div class="aviso">Y aquí tampoco</div>'
+
+                    }
 					document.getElementById("compra").innerHTML=compra;
 					document.getElementById("productos").innerHTML=producto;
 				},

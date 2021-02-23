@@ -29,7 +29,7 @@ if ($resultado){
                 <th scope="row"><?php echo $descri;?></th>
             </form>
             <?php
-            echo '<td><a href="eliminar/eliminar_pedido.php?id='.$compra.'"><i class="fas fa-times"></i></a></td>';
+            echo '<td><a href="eliminar/eliminar_pedido.php?id='.$codped.'&pag=1"><i class="fas fa-times"></i></a></td>';
             ?>
         </tr>
         <?php
