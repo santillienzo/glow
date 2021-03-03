@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
 
     <title>PEDIDO</title>
 </head>
@@ -44,7 +44,7 @@
     function confirm_compra(){
         var respuesta =confirm("¿Estás seguro que deseas confirmar el pedido?"); 
         if (respuesta == true) {
-            window.location.href = "entreg.php";
+            window.location.href = "entrega";
         }else{
             return false;
         }

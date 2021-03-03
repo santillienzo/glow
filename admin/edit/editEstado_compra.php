@@ -11,11 +11,11 @@ $result=mysqli_query($con,$editar);
 
 if ($result) {
     if ($pag == '1') {
-        header("Location: ../pack_admin.php");
+        header("Location: ../pack_admin");
     }elseif ($pag == '2') {
-        header("Location: ../pagado.php");
+        header("Location: ../pagado");
     }else{
-        header("Location: ../historial.php");
+        header("Location: ../historial");
     }
 }else{
     echo"<h3>No se pudo eliminar</h3>";

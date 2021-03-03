@@ -111,7 +111,7 @@
         }
     }
     function open_login(){
-        window.location.href="login.php";
+        window.location.href="login";
     }
     </script>
 </body>

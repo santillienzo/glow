@@ -48,6 +48,12 @@
 
 .imgMV-container img{
     object-fit: cover;
+    height: 305px;
+    min-height: 305px;
+    max-height: 305px;
+    width: 261px;
+    min-width: 261px;
+    max-width: 261px;
 }
 
 .tituloMV-container{

@@ -24,24 +24,24 @@ if (isset($_SESSION['cod_user'])) {
     </div>
 
     <div class="carta-container">
-        <a href="user_admin.php">
+        <a href="user_admin">
             <div class="carta uno">
                 <p>Usuarios</p>
             </div>
         </a>
         
-        <a href="catalogo_admin.php">
+        <a href="catalogo_admin">
             <div class="carta dos">
                 <p>Catálogo</p>
             </div>
         </a>        
-        <a href="administrarPedidos.php">
+        <a href="administrarPedidos">
             <div class="carta tres">
                 <p>Pedidos/Compras</p>
             </div>
         </a>
     </div>
-    <a href="../index.php" class="back"><span>INICIO</span></a>
+    <a href="../" class="back"><span>INICIO</span></a>
 </body>
 </html>
 

@@ -6,6 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="relojes, aros, complementos, room decor, decoración, glow, Mendoza">
+    <meta name="description" content="GLOW STORE es una tienda de complementos y room decor ubicada en Mendoza.">
+    <meta name="application-name" content="GLOW STORE - Tienda online">
+    <meta name="copyright" content="Glow Store - 2021 ©">
+    <meta name="author" content="Victoria Malovini">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/object/copy.css">
@@ -17,7 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 
-    <title>GLOW STORE | INICIO</title>
+
+    <title>GLOW STORE | Tienda de complementos y room decor en Mendoza</title>
 </head>
 <body>
     <?php require 'partials/nav.php' ?>
@@ -27,13 +33,13 @@
         <div class="slider">
             <ul class="lista-slider">
                 <li class="elemento-slider">
-                    <img src="Images/imagenesSlider/glow.jpg" alt="">
+                    <img src="Images/imagenesSlider/glow.jpg" alt="glowstore glow tienda room decor complementos handmade">
                 </li>
                 <li class="elemento-slider">
-                    <img src="Images/imagenesSlider/love.jpg" alt="">
+                    <img src="Images/imagenesSlider/love.jpg" alt="glowstore glow tienda room decor complementos handmade">
                 </li>
                 <li class="elemento-slider">
-                    <img src="Images/imagenesSlider/sweet.jpg" alt="">
+                    <img src="Images/imagenesSlider/sweet.jpg" alt="glowstore glow tienda room decor complementos handmade">
                 </li>
             </ul>
             <ul class="lista-slider-responsive">
@@ -69,7 +75,7 @@
                 </div>
 
                 <div class="accCard roomCard">
-                    <a href="roomdecor.php">
+                    <a href="room-decor.php">
                         <div class="titleAcc-container">
                             <p class="accTitle">ROOM DECOR</p>
                         </div>

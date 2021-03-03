@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
 
     <title>LOGIN</title>
 </head>
@@ -46,7 +46,7 @@
 
 			<button type="submit">Ingresar</button>
 			<div class="text-registro-container">
-				<p>¿No tienes ninguna cuenta? <a href="signup.php">Regístrate.</a></p>
+				<p>¿No tienes ninguna cuenta? <a href="signup">Regístrate.</a></p>
 			</div>
 		</form>
         </div>

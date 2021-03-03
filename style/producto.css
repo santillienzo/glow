@@ -21,8 +21,13 @@ article{
 
 .objeto-imagen img{
     width: 80%;
+    min-width: 80%;
+    max-width: 465px;
+    min-height: 300px;
+    max-height: 445px;
     object-fit: cover;
     box-shadow: 0 0 8px 3px #ccc;
+
 }
 
 
@@ -197,6 +202,12 @@ article{
 .imgMV-container img{
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    height: 305px;
+    min-height: 305px;
+    max-height: 305px;
+    width: 261px;
+    min-width: 261px;
+    max-width: 261px;
 }
 
 .tituloMV-container{

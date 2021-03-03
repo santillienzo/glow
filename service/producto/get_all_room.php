@@ -14,12 +14,14 @@ while($row=mysqli_fetch_array($result)){
 	$des_producto=$row['des_producto'];
 	$pre_pro=$row['pre_pro'];
 	$rut_imagen=$row['rut_imagen'];
+    $alt=$row['alt'];
+
 
 	?>
 	<div class="MVcard">
-        <a href="producto.php?p=<?php echo $id_producto?>">
+        <a href="producto?p=<?php echo $id_producto?>">
             <div class="imgMV-container">
-                <img src="Images/productos/<?php echo $rut_imagen?>" alt="">
+                <img src="Images/productos/<?php echo $rut_imagen?>" alt="<?php echo $alt?>">
             </div>
             <div class="tituloMV-container"><h3><?php echo $nombre_producto?></h3></div>
             <div class="descripcionMV-container"><p><?php echo $des_producto?></p></div>

@@ -243,9 +243,12 @@ li{
     font-family: 'Alata', sans-serif;
     color: #fff;
     font-size: 40px;
-    letter-spacing: 25px;
+    letter-spacing: 20px;
+    margin: auto;
     transition: color .4s ease-in;
 }
+
+
 
 .sticky .titulo{
     color:#B45434;

@@ -20,11 +20,11 @@ if (isset($_SESSION['cod_user'])) {
     <h3 class="title">USUARIOS</h3>
     <div class="container">
         <?php
-            require 'php/admin_usu.php'
+            require 'php/admin_usu'
         ?>
     </div>
 
-    <a href="admin.php" class="back"><span>ATRÁS</span></a>
+    <a href="admin" class="back"><span>ATRÁS</span></a>
 
 </body>
 </html>

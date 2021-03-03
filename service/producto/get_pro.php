@@ -13,10 +13,12 @@ while($row=mysqli_fetch_array($result)){
 	$des_producto=$row['des_producto'];
 	$pre_pro=$row['pre_pro'];
 	$rut_imagen=$row['rut_imagen'];
+    $alt=$row['alt'];
+
 
 	?>
 	<div class="objeto-imagen">
-                <img id="id_imagen" src="Images/productos/<?php echo $rut_imagen?>" alt="">
+                <img id="id_imagen" src="Images/productos/<?php echo $rut_imagen?>" alt="<?php echo $alt?>">
             </div>
             <div class="objeto-info">
                 <h2 id="id_nombre"><?php echo $nombre_producto?></h2>

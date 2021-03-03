@@ -201,12 +201,15 @@ caption {
     width: 10%;
 }
 .tabla-productos thead th:nth-child(6) {
-    width: 30%;
+    width: 15%;
 }
 .tabla-productos thead th:nth-child(7) {
-    width: 5%;
+    width: 15%;
 }
 .tabla-productos thead th:nth-child(8) {
+    width: 5%;
+}
+.tabla-productos thead th:nth-child(9) {
     width: 5%;
 }
 
@@ -285,6 +288,12 @@ caption {
     border-bottom: 1px solid #be7148;
 }
 .input_productos-container input:nth-child(3){
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #be7148;
+}
+.input_productos-container input:nth-child(6){
     width: 100px;
     background-color: transparent;
     border: none;

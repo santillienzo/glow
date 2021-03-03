@@ -15,6 +15,7 @@ if ($result) {
         $pre = $row['pre_pro'];
         $estado = $row['estado'];
         $rut_imagen = $row['rut_imagen'];
+        $alt = $row['alt'];
         ?>
         <tr>
             <form action="edit/editar_pro.php?id=<?php echo $id?>" method="POST">
@@ -24,6 +25,7 @@ if ($result) {
                 <td><input name="precio_pro-in" type="text" value="<?php echo $pre?>"></td>
                 <td><input name="estado_pro-in" type="text" value="<?php echo $estado?>"></td>
                 <td><input name="ruta_pro-in" type="text" value="<?php echo $rut_imagen?>"></td>
+                <td><input name="alt_pro-in" type="text" value="<?php echo $alt?>"></td>
                 <td><button><i class="fas fa-pen"></i></button></td>
             </form>
             <?php

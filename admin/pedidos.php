@@ -21,9 +21,9 @@ if (isset($_SESSION['cod_user'])) {
 <body>
     <header>
         <div class="title-container">
-            <a href="administrarPedidos.php">INICIO PANEL</a>
+            <a href="administrarPedidos">INICIO PANEL</a>
             <h4>PRODUCTOS</h4>
-            <a href="pack_admin.php"><span>TABLA DE PAQUETES</span><i class="fas fa-arrow-right"></i></a>
+            <a href="pack_admin"><span>TABLA DE PAQUETES</span><i class="fas fa-arrow-right"></i></a>
         </div>
     </header>
     

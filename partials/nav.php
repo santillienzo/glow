@@ -19,49 +19,49 @@
                     <a href="/"><li><i class="fas fa-genderless"></i><p>Inicio</p></li></a>
                 </div>
                 <div class="items-nav">
-                    <a href="mas_vendido.php"><li><i class="fas fa-genderless"></i><p>Más vendidos</p></li></a>
+                    <a href="mas-vendido"><li><i class="fas fa-genderless"></i><p>Más vendidos</p></li></a>
                 </div>
                 <div class="items-nav" id="catalogo-btn">
                     <li><i  id="i-catalogo"></i><p>Catálogo</p></li>
                 </div>
                 <div id="items-catalogo">
                     <div class="item-catalogo">
-                        <a href="complementos.php"><li><i class="fas fa-genderless"></i><p>Complementos</p></li></a>
+                        <a href="complementos"><li><i class="fas fa-genderless"></i><p>Complementos</p></li></a>
                     </div>
                     <div class="item-catalogo">
-                        <a href="roomdecor.php"><li><i class="fas fa-genderless"></i><p>Room decor</p></li></a>
+                        <a href="room-decor"><li><i class="fas fa-genderless"></i><p>Room decor</p></li></a>
                     </div>
                 </div>
                 <div class="items-nav">
-                    <a href="contacto.php"><li><i class="fas fa-genderless"></i><p>Contacto</p></li></a>
+                    <a href="contacto"><li><i class="fas fa-genderless"></i><p>Contacto</p></li></a>
                 </div>
                 <div class="items-nav">
-                    <a href="FAQ.php"><li><i class="fas fa-genderless"></i><p>FAQ</p></li></a>
+                    <a href="FAQ"><li><i class="fas fa-genderless"></i><p>FAQ</p></li></a>
                 </div>
                 <div class="items-nav" id="compra-btn">
                     <li><i  id="i-compra"></i><p>Compras</p></li>
                 </div>
                 <div id="items-compras">
                     <div class="item-compra">
-                        <a href="pedido.php"><li><i class="fas fa-genderless"></i><p>Mis pedidos</p></li></a>
+                        <a href="pedido"><li><i class="fas fa-genderless"></i><p>Mis pedidos</p></li></a>
                     </div>
                     <div class="item-compra">
-                        <a href="compra.php"><li><i class="fas fa-genderless"></i><p>Compras Pendientes</p></li></a>
+                        <a href="compra"><li><i class="fas fa-genderless"></i><p>Compras Pendientes</p></li></a>
                     </div>
                     <div class="item-compra">
-                        <a href="historial.php"><li><i class="fas fa-genderless"></i><p>Historial de compras</p></li></a>
+                        <a href="historial"><li><i class="fas fa-genderless"></i><p>Historial de compras</p></li></a>
                     </div>
                 </div>
-                <div class="items-nav">
-                    <a href="politicaDev.php"><li><i class="fas fa-genderless"></i><p>Política de devolución</p></li></a>
-                </div>
+                <!-- <div class="items-nav">
+                    <a href="politica-de-devolucion"><li><i class="fas fa-genderless"></i><p>Política de devolución</p></li></a>
+                </div> -->
                 <?php
                 if (isset($_SESSION['cod_user'])) {
                     $cod_admin = $_SESSION['cod_user'];
                     if ($cod_admin == 1) {
                         echo
                             '<div class="items-nav">'.
-                                '<a href="admin/admin.php"><li><i class="fas fa-genderless"></i><p>Panel de control</p></li></a>'.
+                                '<a href="admin/admin"><li><i class="fas fa-genderless"></i><p>Panel de control</p></li></a>'.
                             '</div>';
                     }
                 }
@@ -72,15 +72,15 @@
                     if (isset($_SESSION['cod_user'])) {
                         echo
                         '<div class="items-nav">'.
-                            '<a href="user.php"><li><i class="fas fa-genderless"></i><p>Perfil</p></li></a>'.
+                            '<a href="user"><li><i class="fas fa-genderless"></i><p>Perfil</p></li></a>'.
                         '</div>'.
                         '<div class="items-nav">'.
-                            '<a href="../service/sesion/cerrarSesion.php"><li><i class="fas fa-genderless"></i><p>Cerrar sesión</p></li></a>'.
+                            '<a href="../service/sesion/cerrarSesion"><li><i class="fas fa-genderless"></i><p>Cerrar sesión</p></li></a>'.
                         '</div>';
                     }else{
                         echo
                         '<div class="items-nav">'.
-                            '<a href="login.php"><li><i class="fas fa-genderless"></i><p>Iniciar sesión</p></li></a>'.
+                            '<a href="login"><li><i class="fas fa-genderless"></i><p>Iniciar sesión</p></li></a>'.
                         '</div>';
                     }
                     ?>
@@ -108,7 +108,7 @@
                 <?php
                 }
                 ?>
-                <a href="carrito.php">
+                <a href="carrito">
                     <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i></li>
                 </a>
             </nav>
@@ -116,20 +116,20 @@
                 if (isset($_SESSION['cod_user'])) {
                     echo
                     '<div class="perfil" id="panel">'.
-                        '<div><a href="user.php">Perfil</a></div>'.
-                        '<div><a href="service/sesion/cerrarSesion.php">Cerrar Sesión</a></div>'.
+                        '<div><a href="user">Perfil</a></div>'.
+                        '<div><a href="service/sesion/cerrarSesion">Cerrar Sesión</a></div>'.
                     '</div>';
                 }else{
                     echo
                     '<div class="perfil" id="panel">'.
-                        '<div><a href="login.php">Iniciar Sesión</a></div>'.
-                        '<div><a href="signup.php">Registrarse</a></div>'.
+                        '<div><a href="login">Iniciar Sesión</a></div>'.
+                        '<div><a href="signup">Registrarse</a></div>'.
                     '</div>';
                 }
             ?>
 
             <div class="responsive menu-responsive">
-                <a href="carrito.php">
+                <a href="carrito">
                     <li class="item-option" id="cart-responsive" title="Carrito"><i class="fas fa-shopping-cart"></i></li>
                 </a>
             </div>

@@ -16,7 +16,7 @@ if (isset($_SESSION['cod_user'])) {
 </head>
 <body>
     <nav>
-    <p><a href="admin.php">Inicio</a></p>
+    <p><a href="admin">Inicio</a></p>
     </nav>
     <div class="container-container">
         <div class="container">
@@ -57,13 +57,13 @@ if (isset($_SESSION['cod_user'])) {
 
 <script type="text/javascript">
     function uno(){
-        window.location.href="pack_admin.php";
+        window.location.href="pack_admin";
     }
     function dos(){
-        window.location.href="pagado.php";
+        window.location.href="pagado";
     }
     function tres(){
-        window.location.href="historial.php";
+        window.location.href="historial";
     }
 </script>
 

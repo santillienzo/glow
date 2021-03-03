@@ -33,6 +33,7 @@ if (isset($_SESSION['cod_user'])) {
                 <th scope="col">PRECIO</th>
                 <th scope="col">ESTADO</th>
                 <th scope="col">RUTA DE IMAGEN</th>
+                <th scope="col">ALT</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
             </tr>
@@ -53,6 +54,7 @@ if (isset($_SESSION['cod_user'])) {
                 <p><i class="fas fa-images"></i></p>
                 <input type="file" name="archivo" class="archivo">
             </div>
+            <input type="text" placeholder="ALT" name="alt">
             <input type="submit" value="Agregar" name="btn-agr" class="btn-enviar btn-produc">
         </div>
     </form>
@@ -140,7 +142,7 @@ if (isset($_SESSION['cod_user'])) {
 
     </div>
         
-    <a href="admin.php" class="back"><span>ATRÁS</span></a>
+    <a href="admin" class="back"><span>ATRÁS</span></a>
 
     
 </body>

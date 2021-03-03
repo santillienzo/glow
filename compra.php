@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
 
     <title>COMPRA</title>
 </head>
@@ -48,7 +48,7 @@
                 <div><h4>¿Como pagar?</h4></div>
                 <div><p>1- Realizar una transferencia al siguiente cbu: <span>0000003100095426308425</span></p></div>
                 <div><p>2- En la descripción de la transferencia ponga el id de la compra (ver detalle de la compra), tu nombre y tu apellido.</span></p></div>
-                <div><p>3- Enviar el comprobante de pago a "glowStore@glowstore.com.ar". (OBLIGATORIO)</span></p></div>
+                <div><p>3- Enviar el comprobante de pago a "glowstorevm@gmail.com". (OBLIGATORIO)</span></p></div>
                 <div><p>4- Una vez hecha la transferencia tendrás que esperar la confirmación del pago. Se te enviará un recibo por mail y en el caso de haber elegido retirar en un punto en común se te enviará un mensaje por WhatsApp al número de tu cuenta.</span></p></div>
             </div>
             <div class="btn-container">

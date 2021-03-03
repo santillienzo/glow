@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
     
     <title>CONTACTO</title>
 </head>
@@ -56,8 +56,7 @@
                     </div>
                     <div class="contacto_cont">
                         <li><i class="fab fa-whatsapp"></i><br><p>+54 9 263 475-9547</p></li>
-                        <li><i class="fas fa-phone"></i><br><p>4425129</p></li>
-                        <li><i class="far fa-envelope"></i><p>glowstorevm@gmail.com</p></li>
+                        <li><i class="far fa-envelope"></i><br><p>glowstorevm@gmail.com</p></li>
                         <li><i class="fas fa-map-marker-alt"></i><p>San Martín - Mendoza | Barrio San Pedro M11 C6</p></li>
                     </div>
                 </div>

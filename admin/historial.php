@@ -21,9 +21,9 @@ if (isset($_SESSION['cod_user'])) {
 <body>
     <header>
         <div class="title-container">
-            <a href="administrarPedidos.php">INICIO PANEL</a>
+            <a href="administrarPedidos">INICIO PANEL</a>
             <h4>HISTORIAL DE PAQUETES</h4>
-            <a href="historial_productos.php"><span>PRODUCTOS</span><i class="fas fa-arrow-right"></i></a>
+            <a href="historial_productos"><span>PRODUCTOS</span><i class="fas fa-arrow-right"></i></a>
         </div>
     </header>
     
@@ -57,7 +57,7 @@ if (isset($_SESSION['cod_user'])) {
         </thead>
         <tbody>
             <?php 
-            require 'php/historial.php';
+            require 'php/historial';
             ?>
         </tbody>
     </table>

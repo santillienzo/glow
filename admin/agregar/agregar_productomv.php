@@ -12,7 +12,7 @@ if (isset($_POST['btn-agr'])) {
         $resultado = mysqli_query($con,$sql);
 
         if ($resultado) {
-            header("Location: ../catalogo_admin.php");
+            header("Location: ../catalogo_admin");
         }
     }
     

@@ -87,7 +87,7 @@ function compra($entrega,$envio){
     
     
     if ($result) {
-    header("Location: ../../compra.php");
+    header("Location: ../../compra");
     }else{
     header("../../pedido.php?e=1");
     }
