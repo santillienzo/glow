@@ -77,7 +77,6 @@
         var p='<?php echo $_GET["p"]; ?>';
     </script>
     <script src="js/menu.js"></script>
-    <script src="js/producto.js"></script>
     <script type="text/javascript">
         function iniciar_compra(){
             var cantidad = 0;

@@ -4,7 +4,7 @@ $response=new stdClass();
 
 
 $i=0;
-$sql="SELECT * FROM complementos INNER JOIN productos ON complementos.id_producto = productos.id_producto WHERE productos.estado = 1";
+$sql="SELECT * FROM complementos INNER JOIN productos ON complementos.id_producto = productos.id_producto WHERE productos.estado >= 1";
 $result=mysqli_query($con,$sql);
 while($row=mysqli_fetch_array($result)){
 	$obj=new stdClass();

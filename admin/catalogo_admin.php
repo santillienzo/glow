@@ -31,7 +31,7 @@ if (isset($_SESSION['cod_user'])) {
                 <th scope="col">NOMBRE</th>
                 <th scope="col">DESCRIPCIÓN</th>
                 <th scope="col">PRECIO</th>
-                <th scope="col">ESTADO</th>
+                <th scope="col">STOCK</th>
                 <th scope="col">RUTA DE IMAGEN</th>
                 <th scope="col">ALT</th>
                 <th scope="col"></th>

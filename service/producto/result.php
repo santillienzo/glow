@@ -6,7 +6,7 @@ $response=new stdClass();
 $datos=[];
 $i=0;
 $product = $_POST['product'];
-$sql="SELECT * FROM productos WHERE estado = 1 AND nombre_producto LIKE '%$product%'";
+$sql="SELECT * FROM productos WHERE estado >= 1 AND nombre_producto LIKE '%$product%'";
 $result=mysqli_query($con,$sql);
 while($row=mysqli_fetch_array($result)){
 	$obj=new stdClass();

@@ -1,0 +1,1 @@
+DELETE FROM `estados_ped` WHERE `estados_ped`.`estado_ped` = 2;

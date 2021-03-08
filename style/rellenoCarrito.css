@@ -36,6 +36,7 @@ article{
 
 .pedido-img img{
     width:  50%;
+    max-height: 165px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 0 2px #000;

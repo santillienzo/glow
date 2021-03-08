@@ -1,0 +1,64 @@
+article{
+    margin-top: 15vh;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+.title{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.title h3{
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+.contenedor{
+    width: 70%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 1px 1px #000;
+    padding: 15px;
+}
+
+.pasos{
+    margin-bottom: 25px;
+}
+
+.pasos h4{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pasos p{
+    margin-bottom: 5px;
+}
+
+.aviso{
+    text-align: center;
+    background-color: rgb(219, 64, 64);
+    color: #fff;
+}
+.aviso h4{
+    margin-bottom: 15px;
+}
+
+.link{
+    text-decoration: underline;
+}
+
+
+
+.fecha{
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #eee;
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    color: rgb(219, 64, 64);
+}

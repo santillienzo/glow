@@ -14,6 +14,7 @@ $editar = "UPDATE productos
             des_producto = '$descri',
             pre_pro = '$precio',
             rut_imagen = '$rutaimg',
+            estado = $estado,
             alt = '$alt' 
         WHERE id_producto = '$id'";
 

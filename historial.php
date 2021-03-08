@@ -73,7 +73,7 @@ session_start();
                         }
                     }else{
                         historial_ +=
-                        '<div class="error">Parece que aquí no hay nada, ve y compra algun producto en GLOW!</div>'
+                        '<div class="error">Parece que aquí no hay nada, ve y compra algún producto en GLOW!</div>'
                     }
                             
                     if (data.pend.length > 0) {
@@ -92,7 +92,7 @@ session_start();
                         }
                     }else{
                         pendiente_ +=
-                        '<div class="error">Parece que aquí no hay nada, ve y encarga algun producto en GLOW!</div>'
+                        '<div class="error">Parece que aquí no hay nada, ve y encarga algún producto en GLOW!</div>'
                     }
 
 					document.getElementById("historial").innerHTML=historial_;

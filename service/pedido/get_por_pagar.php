@@ -47,10 +47,10 @@ if ($filas > 0) {
 			<p><span>Total:</span><span id="montoTotal">ARS $ <?php echo $monto?></span></p>
 		</div>
 		<div class="btn-comprar-container">
-			<div class="cancelar" title="Cancelar compra" onclick="cancelar_compra()"><i class="fas fa-times"></i></div>
-			
-			<div class="btn-comprar-container">
-				<button class="btn-comprar" onclick="confirm_compra()">Comprar</button>
+		<div class="cancelar" title="Cancelar compra" onclick="cancelar_compra()"><i class="fas fa-times"></i></div>
+		
+		<div class="btn-comprar-container">
+			<button class="btn-comprar" onclick="confirm_compra()">Comprar</button>
 		</div>
     </div>
 	<?php

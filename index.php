@@ -57,6 +57,16 @@
         <section class="masVendido-container">
             <div class="masVendidoTítulo"><h2>MÁS VENDIDO</h2></div>
             <div class="objetosMasVendidos-container" id="space-list">
+                <div class="MVcard">
+                    <a href="relojes">
+                        <div class="imgMV-container">
+                            <img src="Images/productos/153445060_456549769032192_8857576872071765558_n.jpg" alt="relojes glow catalogo">
+                        </div>
+                        <div class="tituloMV-container"><h3>Relojes</h3></div>
+                        <div class="descripcionMV-container"><p>Haz click aquí y seguí las intrucciones para poder encargar tu reloj!</p></div>
+                        <div class="precioMV-container"><p>Precios varios</p></div>
+                    </a>
+                </div>
                 <?php
                     require 'service/producto/get_all_productsMV.php';
                 ?>

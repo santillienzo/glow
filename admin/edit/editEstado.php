@@ -12,7 +12,7 @@ if ($result) {
     if ($pag == '1') {
         header("Location: ../pedidos");
     }elseif ($pag == '2') {
-        header("Location: ../pagado_productos");
+        header("Location: ../pagados_productos");
     }else{
         header("Location: ../historial_productos");
     }

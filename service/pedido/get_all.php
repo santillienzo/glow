@@ -38,7 +38,7 @@ if ($filas > 0) {
 							<h3><?php echo $nombre_producto?></h3>
 							<p><b>Precio:</b>ARS $ <?php echo $pre_pro?><p>
 							<p><b>Cantidad:</b><?php echo $cantidad?></p>
-							<a class="eliminar" href="service/pedido/eliminar.php?id=<?php echo $codped?>"><span>Eliminar</span></a>
+							<a class="eliminar" href="service/pedido/eliminar.php?id=<?php echo $codped?>&cantidad=<?php echo $cantidad?>&idproducto=<?php echo $id_producto?>"><span>Eliminar</span></a>
 						</div>
 					</div>
 				</div>
@@ -51,7 +51,11 @@ if ($filas > 0) {
 			<p><span>Subtotal:</span><span id="montoTotal">ARS $ <?php echo $monto?></span></p>
 		</div>
 		<div class="btn-comprar-container">
-			<button class="btn-comprar" onclick="elegirEntrega()">Continuar comprar</button>
+		<div class="cancelar" title="Cancelar compra" onclick="cancelar_compra()"><i class="fas fa-times"></i></div>
+		
+		<div class="btn-comprar-container">
+			<button class="btn-comprar" onclick="confirm_compra()">Comprar</button>
+		</div>
 		</div>
     </div>
 	<?php

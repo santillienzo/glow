@@ -4,7 +4,7 @@ $response=new stdClass();
 
 
 $i=0;
-$sql="SELECT * FROM productos WHERE estado = 1";
+$sql="SELECT * FROM productos WHERE estado >= 1";
 $result=mysqli_query($con,$sql);
 while($row=mysqli_fetch_array($result)){
 	$obj=new stdClass();

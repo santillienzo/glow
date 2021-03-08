@@ -46,8 +46,22 @@
 
 
     <script type="text/javascript">
-        function elegirEntrega(){
-            window.location.href="service/pedido/confirm.php";
+        function cancelar_compra(){
+            var respuesta =confirm("¿Estás seguro que deseas cancelar el pedido?"); 
+            if (respuesta == true) {
+                window.location.href = "service/pedido/cancelar.php?id=<?php echo $_SESSION['cod_user']; ?>";
+            }else{
+                return false;
+            }
+        }
+
+        function confirm_compra(){
+            var respuesta =confirm("¿Estás seguro que deseas confirmar el pedido?"); 
+            if (respuesta == true) {
+                window.location.href = "service/pedido/confirm.php";
+            }else{
+                return false;
+            }
         }
     </script>
 
