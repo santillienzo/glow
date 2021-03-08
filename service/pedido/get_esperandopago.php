@@ -52,6 +52,16 @@ while($row=mysqli_fetch_array($result_compra)){
 }
 $response->prod=$prod;
 
+$pend_entrega=[];
+$sql_pend_entrega = "SELECT * FROM compras WHERE cod_user = '$usuario' AND estado_compra = 2";
+$result_pend_entrega = mysqli_query($con,$sql_pend_entrega);
+$filas= mysqli_num_rows($result_pend_entrega);
+
+if ($filas > 0) {
+	$pend_entrega[] = 1;
+}
+$response->pend_entrega=$pend_entrega;
+
 
 
 

@@ -15,7 +15,7 @@ while($row=mysqli_fetch_array($result)){
 	$pre_pro=$row['pre_pro'];
 	$rut_imagen=$row['rut_imagen'];
     $alt=$row['alt'];
-
+    $i++;
 
 	?>
 	<div class="MVcard">
@@ -30,6 +30,15 @@ while($row=mysqli_fetch_array($result)){
     </div>
 
 <?php
+}
+
+if ($i == 0) {
+    ?>
+    <div class="trabajando">
+        <i class="fas fa-tools"></i>
+        <p>Aquí no hay nada. Estamos trabajando en ello!</p>
+    </div>
+    <?php
 }
 
 ?>

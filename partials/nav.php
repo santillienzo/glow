@@ -43,10 +43,7 @@
                 </div>
                 <div id="items-compras">
                     <div class="item-compra">
-                        <a href="pedido"><li><i class="fas fa-genderless"></i><p>Mis pedidos</p></li></a>
-                    </div>
-                    <div class="item-compra">
-                        <a href="compra"><li><i class="fas fa-genderless"></i><p>Compras Pendientes</p></li></a>
+                        <a href="compra"><li><i class="fas fa-genderless"></i><p>Último recibo</p></li></a>
                     </div>
                     <div class="item-compra">
                         <a href="historial"><li><i class="fas fa-genderless"></i><p>Historial de compras</p></li></a>
@@ -109,7 +106,39 @@
                 }
                 ?>
                 <a href="carrito">
-                    <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i></li>
+                    <?php //NOTIFICACIÓN DEL CARRITO
+                        include('service/_conexion.php');
+                        $cantidad = 0;
+                        
+                        if (isset($_SESSION['cod_user'])) {
+                            $user = $_SESSION['cod_user'];
+                            $sql = "SELECT * FROM pedido WHERE cod_user = $user AND estado_ped = 1";
+                            $result = mysqli_query($con,$sql);
+    
+                            $filas= mysqli_num_rows($result);
+    
+                            while ($row=mysqli_fetch_array($result)) {
+                                $cantidad += $row['cantidad'];
+                            }
+    
+                            if ($filas > 0) {
+                                ?>
+                            <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i><div class="marcador"><?php echo $cantidad;?></div></li>
+                                <?php
+                            }else{
+                                ?>
+                            <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i></li>
+                                <?php
+                            }
+                        }else{
+                            ?>
+                            <li class="item-option" id="cart" title="Carrito"><i class="fas fa-shopping-cart"></i></li>
+                            <?php
+                        }
+
+                    ?>
+
+
                 </a>
             </nav>
             <?php

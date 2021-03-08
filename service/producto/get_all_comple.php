@@ -29,5 +29,13 @@ while($row=mysqli_fetch_array($result)){
 
 <?php
 }
+if ($i == 0) {
+    ?>
+    <div class="trabajando">
+        <i class="fas fa-tools"></i>
+        <p>Aquí no hay nada. Estamos trabajando en ello!</p>
+    </div>
+    <?php
+}
 
 ?>

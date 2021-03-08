@@ -27,6 +27,9 @@
         ?>
         <article>
             <div class="title"><h4>Detalle de tu compra</h4></div>
+            <div class="aviso_compra" id="aviso">
+            
+            </div>
             <div class="datos_container" id="c">
                 <div class="datos_compra_container">
                     <h4 class="title-dato">Compra</h4>
@@ -85,6 +88,7 @@
                     console.log(data);
                     let compra=''; 
                     let producto='';
+                    let aviso='';
                     if(data.datos.length > 0){
                         for (var i = 0; i < data.datos.length; i++) {
                             compra +=
@@ -117,10 +121,16 @@
                         '<div class="aviso">Aquí no hay nada</div>'
                         producto +=
                         '<div class="aviso">Y aquí tampoco</div>'
+                        if (data.pend_entrega.length == 1) {
+                            aviso +=
+                            '<p><i class="fas fa-check-circle"></i>Tienes un pedido verificado y pendiente de entrega. Ve a la sección <a href="historial">historial</a> y verifícalo.</p>'
+                        }
+
 
                     }
 					document.getElementById("compra").innerHTML=compra;
 					document.getElementById("productos").innerHTML=producto;
+					document.getElementById("aviso").innerHTML=aviso;
 				},
 				error:function(err){
 					console.error(err);

@@ -1,5 +1,6 @@
 <?php
     session_start();
+    error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,6 +97,7 @@
                     console.log(data);
                     if(data.state){
                         alert(data.detail);
+                        window.location.href="producto";
                     }else{
                         alert(data.detail);
                         if(data.open_login){

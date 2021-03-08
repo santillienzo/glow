@@ -57,7 +57,7 @@ function compra($entrega,$envio){
     on ped.id_producto=pro.id_producto
     inner join estados_ped 
     on ped.estado_ped = estados_ped.estado_ped
-    where ped.estado_ped =2 and cod_user = $cod_user";
+    where ped.estado_ped =1 and cod_user = $cod_user";
     $result_datos=mysqli_query($con,$sql_precio);
     while($row=mysqli_fetch_array($result_datos)){
         $obj=new stdClass();
@@ -73,7 +73,7 @@ function compra($entrega,$envio){
 
     //CAMBIAMOS A FASE 3 LOS ARTICULOS PEDIDOS.
     $sql_pedido = "UPDATE pedido SET estado_ped=3, id_entrega = $entrega
-            WHERE estado_ped=2 AND cod_user = $cod_user";
+            WHERE estado_ped=1 AND cod_user = $cod_user";
     $result_pedido= mysqli_query($con,$sql_pedido);
     if ($result_pedido) {
         # code...
