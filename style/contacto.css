@@ -148,7 +148,9 @@ article{
 .mensaje-exito{
     position: fixed;
     width: 100vw;
-    height: 85vh;
+    height: 100vh;
+    top: 0;
+    z-index: 1000000000000000;
     background-color: #e6dfdf5b;
     display: flex;
     justify-content: center;

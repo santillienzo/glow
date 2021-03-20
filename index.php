@@ -26,6 +26,8 @@
     <title>GLOW STORE | Tienda de complementos y room decor en Mendoza</title>
 </head>
 <body>
+
+
     <?php require 'partials/nav.php' ?>
     
     

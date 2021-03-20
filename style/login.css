@@ -80,6 +80,43 @@
 }
 
 
+.password_olvi a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: underline;
+    margin-top: 15px;
+}
+
+.mensaje-exito{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 1000000000000000;
+    background-color: #e6dfdf5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje-container{
+    width: 25%;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(47, 155, 47);
+}
+
+.mensaje-container p{
+    margin-top: 15px;
+    color: #fff;
+}
+
+.mensaje-container i{
+    color: #fff;
+}
+
 
 
 
@@ -176,5 +213,37 @@
 .text-registro-container p a{
     color: #fff;
     text-decoration: underline;
+
+    
+}
+
+.mensaje-exito{
+    position: fixed;
+    width: 100vw;
+    height: 85vh;
+    background-color: #e6dfdf5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje-container{
+    width: 85%;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(47, 155, 47);
+}
+
+.mensaje-container p{
+    margin-top: 15px;
+    color: #fff;
+}
+
+.mensaje-container i{
+    color: #fff;
 }
 }
+
+

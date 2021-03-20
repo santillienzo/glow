@@ -14,6 +14,7 @@ while($row=mysqli_fetch_array($result)){
 	$pre_pro=$row['pre_pro'];
 	$rut_imagen=$row['rut_imagen'];
 	$alt=$row['alt'];
+    $i++;
 
 	?>
 	<div class="MVcard">
